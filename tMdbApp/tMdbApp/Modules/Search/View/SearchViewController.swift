@@ -20,6 +20,7 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
         setupNavigation()
         setupUI()
         setupTableView()
+        setupSegmentedControl()
     }
 
     private func setupUI() {
@@ -28,6 +29,7 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
         tableView = searchComponent.tableView
         
         tableView?.dataSource = self
+        tableView?.delegate = self
         searchBar?.delegate = self
     }
     
@@ -37,16 +39,38 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
     }
     
     private func setupTableView() {
-        tableView?.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
+        tableView?.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
+    }
+    
+    private func setupSegmentedControl() {
+        segmentedControl?.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
+
+    }
+    
+    @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+            presenter?.resetData()
+            tableView?.tableFooterView = nil
+            tableView?.reloadData()
+        
+    }
+    
+    private func createSpinnerFooter() -> UIView {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
+        let spinner: UIActivityIndicatorView = UIActivityIndicatorView()
+        spinner.center = footerView.center
+        footerView.addSubview(spinner)
+        spinner.startAnimating()
+        
+        return footerView
     }
 
 }
 
 extension SearchViewController: SearchPresenterOutputProtocol {
+    
     func updateTable() {
-        DispatchQueue.main.async {
-            self.tableView?.reloadData()
-        }
+            self.tableView?.tableFooterView = nil
+            self.tableView?.reloadData()            
     }
     
     
@@ -63,7 +87,7 @@ extension SearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchTableViewCell
         if segmentedControl?.selectedSegmentIndex == 0 {
             cell.movieInfo = presenter?.movieList?[indexPath.row]
         } else {
@@ -71,7 +95,9 @@ extension SearchViewController: UITableViewDataSource {
         }
         return cell
     }
-    
+}
+
+extension SearchViewController: UITableViewDelegate {
     
 }
 
@@ -89,7 +115,27 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let type: SearchType = SearchType(rawValue: segmentedControl?.selectedSegmentIndex ?? 0) ?? .movie
         if let text = searchBar.text, !text.isEmpty {
+            presenter?.resetData()
             presenter?.search(type: type, query: text)
+        }
+    }
+}
+
+extension SearchViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        tableView?.tableFooterView = nil
+        guard !(presenter?.movieList?.isEmpty ?? true) || !(presenter?.seriesList?.isEmpty ?? true) else { return }
+        let position = scrollView.contentOffset.y
+        if position > (tableView!.contentSize.height-50-scrollView.frame.size.height) {
+          refreshSearch()
+        }
+    }
+    
+    private func refreshSearch() {
+        let type: SearchType = SearchType(rawValue: segmentedControl?.selectedSegmentIndex ?? 0) ?? .movie
+        if let text = searchBar?.text, !text.isEmpty {
+            tableView?.tableFooterView = createSpinnerFooter()
+            presenter?.refreshSearch(type: type, query: text)
         }
     }
 }

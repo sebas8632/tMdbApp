@@ -22,17 +22,17 @@ protocol SearchPresenterInputProtocol: class {
     
     var movieList: [SearchMovieModel]? { get set }
     var seriesList: [SearchTvModel]? { get set }
-
+    var actualPage: Int? { get set }
+    
     func viewDidLoad()
-
     func search(type: SearchType, query: String)
-    func refreshSearch(type: SearchType, query: String, page: Int)
+    func refreshSearch(type: SearchType, query: String)
+    func resetData()
 }
 
 
 protocol SearchPresenterOutputProtocol: class {
-    func updateTable()
-    
+    func updateTable()    
     
 }
 
@@ -40,20 +40,23 @@ protocol SearchPresenterOutputProtocol: class {
 protocol SearchInteractorInputProtocol: class {
     var presenter: SearchInteractorOutputProtocol? { get set }
     var remoteDataManager: SearchRemoteDataManagerInputProtocol? { get set }
+    var totalPages: Int? { get set }
 
     func search(type: SearchType, query: String, page: Int)
+    func refreshSearch(type: SearchType, query: String, page: Int)
 }
 
 
 protocol SearchInteractorOutputProtocol: class {
-    func didSearchMovies(movies: [SearchMovieModel])
-    func didSearchSeries(series: [SearchTvModel])
+    func didSearchMovies(movies: [SearchMovieModel], actualPage: Int)
+    func didSearchSeries(series: [SearchTvModel], actualPage: Int)
 }
 
 
 protocol SearchRemoteDataManagerInputProtocol: class {
     var interactor: SearchRemoteDataManagerOutputProtocol? { get set }
     var sessionProvider: ProviderProtocol? { get set }
+    var isPaginating: Bool? { get set }
     
     func searchMovie(by query: String, page: Int)
     func searchTv(by query: String, page: Int)

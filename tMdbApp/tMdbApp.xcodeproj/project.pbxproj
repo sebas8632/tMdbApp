@@ -33,10 +33,8 @@
 		B165BBAF26D1B52900AB2601 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBAE26D1B52900AB2601 /* HomeRouter.swift */; };
 		B165BBB426D1BA0200AB2601 /* SearchComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBB326D1BA0200AB2601 /* SearchComponentView.swift */; };
 		B165BBB826D1BA1100AB2601 /* SearchComponentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B165BBB726D1BA1100AB2601 /* SearchComponentView.xib */; };
-		B165BBC726D1D16600AB2601 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBC526D1D16600AB2601 /* MovieTableViewCell.swift */; };
-		B165BBC826D1D16600AB2601 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B165BBC626D1D16600AB2601 /* MovieTableViewCell.xib */; };
-		B165BBCD26D1D17300AB2601 /* SerieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBCB26D1D17300AB2601 /* SerieTableViewCell.swift */; };
-		B165BBCE26D1D17300AB2601 /* SerieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B165BBCC26D1D17300AB2601 /* SerieTableViewCell.xib */; };
+		B165BBC726D1D16600AB2601 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBC526D1D16600AB2601 /* SearchTableViewCell.swift */; };
+		B165BBC826D1D16600AB2601 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B165BBC626D1D16600AB2601 /* SearchTableViewCell.xib */; };
 		B165BBD626D1D23F00AB2601 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBD526D1D23F00AB2601 /* SearchResponseModel.swift */; };
 		B165BBDA26D1D25F00AB2601 /* SearchTVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBD926D1D25F00AB2601 /* SearchTVModel.swift */; };
 		B165BBDE26D1D28100AB2601 /* SearchMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBDD26D1D28100AB2601 /* SearchMovieModel.swift */; };
@@ -109,10 +107,8 @@
 		B165BBAE26D1B52900AB2601 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		B165BBB326D1BA0200AB2601 /* SearchComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchComponentView.swift; sourceTree = "<group>"; };
 		B165BBB726D1BA1100AB2601 /* SearchComponentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchComponentView.xib; sourceTree = "<group>"; };
-		B165BBC526D1D16600AB2601 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
-		B165BBC626D1D16600AB2601 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
-		B165BBCB26D1D17300AB2601 /* SerieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieTableViewCell.swift; sourceTree = "<group>"; };
-		B165BBCC26D1D17300AB2601 /* SerieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SerieTableViewCell.xib; sourceTree = "<group>"; };
+		B165BBC526D1D16600AB2601 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		B165BBC626D1D16600AB2601 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		B165BBD526D1D23F00AB2601 /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
 		B165BBD926D1D25F00AB2601 /* SearchTVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTVModel.swift; sourceTree = "<group>"; };
 		B165BBDD26D1D28100AB2601 /* SearchMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieModel.swift; sourceTree = "<group>"; };
@@ -401,10 +397,8 @@
 		B165BBC426D1D15500AB2601 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				B165BBC526D1D16600AB2601 /* MovieTableViewCell.swift */,
-				B165BBC626D1D16600AB2601 /* MovieTableViewCell.xib */,
-				B165BBCB26D1D17300AB2601 /* SerieTableViewCell.swift */,
-				B165BBCC26D1D17300AB2601 /* SerieTableViewCell.xib */,
+				B165BBC526D1D16600AB2601 /* SearchTableViewCell.swift */,
+				B165BBC626D1D16600AB2601 /* SearchTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -523,10 +517,9 @@
 			files = (
 				B165BB7426D0C95600AB2601 /* LaunchScreen.storyboard in Resources */,
 				B165BB1C26D0B15900AB2601 /* MainViewController.xib in Resources */,
-				B165BBC826D1D16600AB2601 /* MovieTableViewCell.xib in Resources */,
+				B165BBC826D1D16600AB2601 /* SearchTableViewCell.xib in Resources */,
 				B165BBB826D1BA1100AB2601 /* SearchComponentView.xib in Resources */,
 				B165BBA726D1B43500AB2601 /* SearchViewController.xib in Resources */,
-				B165BBCE26D1D17300AB2601 /* SerieTableViewCell.xib in Resources */,
 				B165BAE326D0AD6B00AB2601 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,7 +548,7 @@
 				B165BB3926D0BC5800AB2601 /* SearchRouter.swift in Sources */,
 				B165BBDE26D1D28100AB2601 /* SearchMovieModel.swift in Sources */,
 				B165BB8826D0DC8200AB2601 /* SearchCategory.swift in Sources */,
-				B165BBC726D1D16600AB2601 /* MovieTableViewCell.swift in Sources */,
+				B165BBC726D1D16600AB2601 /* SearchTableViewCell.swift in Sources */,
 				B165BBD626D1D23F00AB2601 /* SearchResponseModel.swift in Sources */,
 				B165BB2726D0B3B700AB2601 /* NetworkConstants.swift in Sources */,
 				B165BBA626D1B43500AB2601 /* SearchViewController.swift in Sources */,
@@ -569,7 +562,6 @@
 				B165BAE126D0AD6900AB2601 /* tMdbApp.xcdatamodeld in Sources */,
 				B165BB4526D0BFBD00AB2601 /* SearchRemoteDataManager.swift in Sources */,
 				B165BAD726D0AD6900AB2601 /* AppDelegate.swift in Sources */,
-				B165BBCD26D1D17300AB2601 /* SerieTableViewCell.swift in Sources */,
 				B165BBA126D1B18500AB2601 /* HomeProtocols.swift in Sources */,
 				B165BB1B26D0B15900AB2601 /* MainViewController.swift in Sources */,
 				B165BBAB26D1B4CD00AB2601 /* HomePresenter.swift in Sources */,

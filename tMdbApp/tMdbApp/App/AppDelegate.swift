@@ -17,10 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let navigation: UINavigationController = UINavigationController()
-        let searchView: MainViewController = HomeRouter.createModule()
-        navigation.viewControllers = [searchView]
-        window?.rootViewController = navigation
+        let tabBarController = UITabBarController()
+        
+        let searchNavigation: UINavigationController = UINavigationController()
+        let searchView: SearchViewController = SearchRouter.createModule()
+        searchNavigation.viewControllers = [searchView]
+        
+        let movieNavigation: UINavigationController = UINavigationController()
+        let seriesNavigation: UINavigationController = UINavigationController()
+        
+        tabBarController.viewControllers = [searchNavigation]
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
 
         return true

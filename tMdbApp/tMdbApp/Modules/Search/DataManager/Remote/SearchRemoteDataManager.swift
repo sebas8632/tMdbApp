@@ -8,7 +8,7 @@
 import Foundation
 import JSFSNetwork
 class SearchRemoteDataManager: SearchRemoteDataManagerInputProtocol {
-
+    var isPaginating: Bool?
 
     var sessionProvider: ProviderProtocol?
     var interactor: SearchRemoteDataManagerOutputProtocol?
@@ -17,9 +17,13 @@ class SearchRemoteDataManager: SearchRemoteDataManagerInputProtocol {
         sessionProvider?.request(type: SearchResponseModel<SearchMovieModel>.self, service: SearchService.searchMovie(query: query, page: page), completion: {[weak self] (result) in
             switch result {
             case .success(let result):
-                self?.interactor?.didSearchMovie(response: result)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self?.interactor?.didSearchMovie(response: result)
+                }
             case .failure(let networkError):
-                print(networkError)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    print(networkError)
+                }
             }
         })
     }
@@ -28,9 +32,13 @@ class SearchRemoteDataManager: SearchRemoteDataManagerInputProtocol {
         sessionProvider?.request(type: SearchResponseModel<SearchTvModel>.self, service: SearchService.searchTv(query: query, page: page), completion: { [weak self] (result) in
             switch result {
             case .success(let result):
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self?.interactor?.didSearchTv(response: result)
+                }
             case .failure(let networkError):
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 print(networkError)
+                }
             }
         })
     }
