@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieTableViewCell" customModule="tMdbApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="144" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="tMdbApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="494" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="494" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6j5-3C-IaN">
+                        <rect key="frame" x="8" y="34.5" width="80" height="75.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="B2L-Dg-pqz"/>
+                            <constraint firstAttribute="width" constant="80" id="FZ6-Ic-7kW"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="8pg-IW-0VF">
+                        <rect key="frame" x="104" y="8" width="382" height="128"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter y la piedra filosofal de españa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3JM-KQ-Mcs">
+                                <rect key="frame" x="0.0" y="0.0" width="382" height="71.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/08/2001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2N-Dc-Ion">
+                                <rect key="frame" x="0.0" y="72.5" width="382" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.56207496759999998" green="0.56207496759999998" blue="0.56207496759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4,7/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PG9-aV-SP9">
+                                <rect key="frame" x="0.0" y="100.5" width="382" height="27.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="8pg-IW-0VF" secondAttribute="bottom" constant="8" id="0ot-2h-EFD"/>
+                    <constraint firstItem="8pg-IW-0VF" firstAttribute="leading" secondItem="6j5-3C-IaN" secondAttribute="trailing" constant="16" id="41X-Yx-eJ0"/>
+                    <constraint firstItem="8pg-IW-0VF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="43r-Nz-NjN"/>
+                    <constraint firstAttribute="trailing" secondItem="8pg-IW-0VF" secondAttribute="trailing" constant="8" id="TWH-UA-CJf"/>
+                    <constraint firstItem="6j5-3C-IaN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aTZ-aG-P6Z"/>
+                    <constraint firstItem="6j5-3C-IaN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="rHA-8w-502"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="posterImageView" destination="6j5-3C-IaN" id="Qx7-db-fzx"/>
+                <outlet property="releaseDateLabel" destination="h2N-Dc-Ion" id="zhQ-vD-rEP"/>
+                <outlet property="titleLabel" destination="3JM-KQ-Mcs" id="nGx-bJ-X0b"/>
+                <outlet property="voteAverageLabel" destination="PG9-aV-SP9" id="9Ro-ax-VMX"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="143.97321428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

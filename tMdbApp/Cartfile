@@ -1,0 +1,6 @@
+## Personal Frameworks
+github "https://github.com/sebas8632/JSFSNetwork" == 1.0.8
+
+## Third Party Frameworks
+github "onevcat/Kingfisher" ~> 6.0
+
