@@ -21,12 +21,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let searchNavigation: UINavigationController = UINavigationController()
         let searchView: SearchViewController = SearchRouter.createModule()
+        let searchItem: UITabBarItem = UITabBarItem()
+        searchItem.title = "Search"
+        searchItem.image = UIImage(named: "search")
+        searchView.tabBarItem = searchItem
         searchNavigation.viewControllers = [searchView]
         
-        let movieNavigation: UINavigationController = UINavigationController()
+        let moviesNavigation: UINavigationController = UINavigationController()
+        let moviesView: MoviesViewController = MoviesRouter.createModule()
+        let movieItem: UITabBarItem = UITabBarItem()
+        movieItem.title = "Movies"
+        movieItem.image = UIImage(named: "movie")
+        moviesView.tabBarItem = movieItem
+        moviesNavigation.viewControllers = [moviesView]
+        
         let seriesNavigation: UINavigationController = UINavigationController()
         
-        tabBarController.viewControllers = [searchNavigation]
+        tabBarController.viewControllers = [moviesNavigation, searchNavigation]
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
 

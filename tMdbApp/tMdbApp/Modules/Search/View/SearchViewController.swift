@@ -35,7 +35,6 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
     
     private func setupNavigation() {
         navigationController?.navigationBar.isHidden = false
-        self.title = "Search"
     }
     
     private func setupTableView() {
