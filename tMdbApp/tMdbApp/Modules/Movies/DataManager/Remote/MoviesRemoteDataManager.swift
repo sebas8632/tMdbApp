@@ -13,7 +13,7 @@ class MoviesRemoteDataManager: MoviesRemoteDataManagerInputProtocol {
     var interactor: MoviesRemoteDataManagerOutputProtocol?
    
     func searchPopularMovies(group: DispatchGroup) {
-        sessionProvider?.request(type: SearchResponseModel<SearchMovieModel>.self, service: MoviesService.getPopular, completion: { [weak self] (result) in
+        sessionProvider?.request(type: ResponseModel<MovieModel>.self, service: MoviesService.getPopular, completion: { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.interactor?.didSearchPopularMovies(movies: response.results ?? [])
@@ -25,7 +25,7 @@ class MoviesRemoteDataManager: MoviesRemoteDataManagerInputProtocol {
     }
     
     func searchTopRatedMovies(group: DispatchGroup) {
-        sessionProvider?.request(type: SearchResponseModel<SearchMovieModel>.self, service: MoviesService.getTopRated, completion: { [weak self] (result) in
+        sessionProvider?.request(type: ResponseModel<MovieModel>.self, service: MoviesService.getTopRated, completion: { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.interactor?.didSearchTopRatedMovies(movies: response.results ?? [])
@@ -37,7 +37,7 @@ class MoviesRemoteDataManager: MoviesRemoteDataManagerInputProtocol {
     }
     
     func searchUpcomingMovies(group: DispatchGroup) {
-        sessionProvider?.request(type: SearchResponseModel<SearchMovieModel>.self, service: MoviesService.getUpcoming, completion: { [weak self] (result) in
+        sessionProvider?.request(type: ResponseModel<MovieModel>.self, service: MoviesService.getUpcoming, completion: { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.interactor?.didSearchUpcomingMovies(movies: response.results ?? [])

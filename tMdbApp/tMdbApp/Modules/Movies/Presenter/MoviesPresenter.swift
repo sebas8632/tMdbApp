@@ -12,9 +12,9 @@ class MoviesPresenter: MoviesPresenterInputProtocol {
     var interactor: MoviesInteractorInputProtocol?
     var router: MoviesRouterProtocol?
     
-    var popularMovies: [SearchMovieModel]?
-    var topRatedMovies: [SearchMovieModel]?
-    var upcomingMovies: [SearchMovieModel]?
+    var popularMovies: [MovieModel]?
+    var topRatedMovies: [MovieModel]?
+    var upcomingMovies: [MovieModel]?
     
     func getMovies() {
         interactor?.getMovies()
@@ -22,7 +22,7 @@ class MoviesPresenter: MoviesPresenterInputProtocol {
 }
 
 extension MoviesPresenter: MoviesInteractorOutputProtocol {
-    func didGetMovies(popularMovies: [SearchMovieModel], topRatedMovies: [SearchMovieModel], upcomingMovies: [SearchMovieModel]) {
+    func didGetMovies(popularMovies: [MovieModel], topRatedMovies: [MovieModel], upcomingMovies: [MovieModel]) {
         self.popularMovies = popularMovies
         self.topRatedMovies = topRatedMovies
         self.upcomingMovies = upcomingMovies

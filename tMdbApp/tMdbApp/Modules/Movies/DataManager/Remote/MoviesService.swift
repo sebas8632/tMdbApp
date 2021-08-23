@@ -25,7 +25,6 @@ enum MoviesService: ServiceProtocol  {
             return "/movie/top_rated"
         case .getUpcoming:
             return "/movie/upcoming"
-        
         }
     }
     

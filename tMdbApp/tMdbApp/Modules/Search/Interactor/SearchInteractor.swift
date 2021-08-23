@@ -44,16 +44,16 @@ class SearchInteractor: SearchInteractorInputProtocol {
 
 extension SearchInteractor: SearchRemoteDataManagerOutputProtocol {
     
-    func didSearchMovie(response: SearchResponseModel<SearchMovieModel>) {
+    func didSearchMovie(response: ResponseModel<MovieModel>) {
         totalPages = response.totalPages
-        let movies: [SearchMovieModel] = response.results ?? []
+        let movies: [MovieModel] = response.results ?? []
         self.remoteDataManager?.isPaginating = false
         self.presenter?.didSearchMovies(movies: movies, actualPage: response.page)
     }
     
-    func didSearchTv(response: SearchResponseModel<SearchTvModel>) {
+    func didSearchTv(response: ResponseModel<TvModel>) {
         totalPages = response.totalPages
-        let series: [SearchTvModel] = response.results ?? []
+        let series: [TvModel] = response.results ?? []
         self.remoteDataManager?.isPaginating = false
         self.presenter?.didSearchSeries(series: series, actualPage: response.page)
     }

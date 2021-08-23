@@ -17,9 +17,9 @@ protocol MoviesPresenterInputProtocol: class {
     var interactor: MoviesInteractorInputProtocol? { get set }
     var router: MoviesRouterProtocol? { get set }
     
-    var popularMovies: [SearchMovieModel]? { get set }
-    var topRatedMovies: [SearchMovieModel]? { get set }
-    var upcomingMovies: [SearchMovieModel]? { get set }
+    var popularMovies: [MovieModel]? { get set }
+    var topRatedMovies: [MovieModel]? { get set }
+    var upcomingMovies: [MovieModel]? { get set }
     
     func getMovies()
 }
@@ -32,18 +32,18 @@ protocol MoviesInteractorInputProtocol: class {
     var remoteDataManager: MoviesRemoteDataManagerInputProtocol? { get set }
     var presenter: MoviesInteractorOutputProtocol? { get set }
 
-    var popularMovies: [SearchMovieModel]? { get set }
-    var topRatedMovies: [SearchMovieModel]? { get set }
-    var upcomingMovies: [SearchMovieModel]? { get set }
+    var popularMovies: [MovieModel]? { get set }
+    var topRatedMovies: [MovieModel]? { get set }
+    var upcomingMovies: [MovieModel]? { get set }
     
     func getMovies()
 }
 
 protocol MoviesInteractorOutputProtocol: class {
     
-    func didGetMovies(popularMovies: [SearchMovieModel],
-                      topRatedMovies: [SearchMovieModel],
-                      upcomingMovies: [SearchMovieModel])
+    func didGetMovies(popularMovies: [MovieModel],
+                      topRatedMovies: [MovieModel],
+                      upcomingMovies: [MovieModel])
 }
 
 protocol MoviesRemoteDataManagerInputProtocol: class {
@@ -58,9 +58,9 @@ protocol MoviesRemoteDataManagerInputProtocol: class {
 
 protocol MoviesRemoteDataManagerOutputProtocol: class {
     
-    func didSearchPopularMovies(movies: [SearchMovieModel])
-    func didSearchTopRatedMovies(movies: [SearchMovieModel])
-    func didSearchUpcomingMovies(movies: [SearchMovieModel])
+    func didSearchPopularMovies(movies: [MovieModel])
+    func didSearchTopRatedMovies(movies: [MovieModel])
+    func didSearchUpcomingMovies(movies: [MovieModel])
 }
 
 protocol MoviesRouterProtocol {

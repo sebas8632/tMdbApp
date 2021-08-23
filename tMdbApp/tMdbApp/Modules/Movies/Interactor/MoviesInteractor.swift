@@ -9,11 +9,11 @@ import Foundation
 
 class MoviesInteractor: MoviesInteractorInputProtocol {
 
-    var popularMovies: [SearchMovieModel]?
+    var popularMovies: [MovieModel]?
     
-    var topRatedMovies: [SearchMovieModel]?
+    var topRatedMovies: [MovieModel]?
     
-    var upcomingMovies: [SearchMovieModel]?
+    var upcomingMovies: [MovieModel]?
     
     var remoteDataManager: MoviesRemoteDataManagerInputProtocol?
     var presenter: MoviesInteractorOutputProtocol?
@@ -35,22 +35,19 @@ class MoviesInteractor: MoviesInteractorInputProtocol {
                                     topRatedMovies: self?.topRatedMovies ?? [],
                                     upcomingMovies: self?.upcomingMovies ?? [])
         }
-        
     }
-    
-    
 }
 
 extension MoviesInteractor: MoviesRemoteDataManagerOutputProtocol {
-    func didSearchPopularMovies(movies: [SearchMovieModel]) {
+    func didSearchPopularMovies(movies: [MovieModel]) {
         popularMovies = movies
     }
     
-    func didSearchTopRatedMovies(movies: [SearchMovieModel]) {
+    func didSearchTopRatedMovies(movies: [MovieModel]) {
         topRatedMovies = movies
     }
     
-    func didSearchUpcomingMovies(movies: [SearchMovieModel]) {
+    func didSearchUpcomingMovies(movies: [MovieModel]) {
         upcomingMovies = movies
     }
     

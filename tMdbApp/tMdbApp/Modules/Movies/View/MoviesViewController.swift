@@ -12,7 +12,7 @@ class MoviesViewController: UIViewController, MoviesViewProtocol {
     @IBOutlet weak var showComponentView: ShowComponentView!
     var menuBar: MenuBarView?
     
-    var movies: [SearchMovieModel]?
+    var movies: [MovieModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +40,6 @@ extension MoviesViewController: MoviesPresenterOutputProtocol {
         movies = presenter?.popularMovies
         showComponentView.contentTableView.reloadData()
     }
-    
-    
 }
 
 extension MoviesViewController: UITableViewDataSource {

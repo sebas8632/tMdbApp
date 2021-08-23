@@ -20,8 +20,8 @@ protocol SearchPresenterInputProtocol: class {
     var interactor: SearchInteractorInputProtocol? { get set }
     var router: SearchRouterProtocol? { get set }
     
-    var movieList: [SearchMovieModel]? { get set }
-    var seriesList: [SearchTvModel]? { get set }
+    var movieList: [MovieModel]? { get set }
+    var seriesList: [TvModel]? { get set }
     var actualPage: Int? { get set }
     
     func viewDidLoad()
@@ -48,8 +48,8 @@ protocol SearchInteractorInputProtocol: class {
 
 
 protocol SearchInteractorOutputProtocol: class {
-    func didSearchMovies(movies: [SearchMovieModel], actualPage: Int)
-    func didSearchSeries(series: [SearchTvModel], actualPage: Int)
+    func didSearchMovies(movies: [MovieModel], actualPage: Int)
+    func didSearchSeries(series: [TvModel], actualPage: Int)
 }
 
 
@@ -63,8 +63,8 @@ protocol SearchRemoteDataManagerInputProtocol: class {
 }
 
 protocol SearchRemoteDataManagerOutputProtocol: class {
-    func didSearchMovie(response: SearchResponseModel<SearchMovieModel>)
-    func didSearchTv(response: SearchResponseModel<SearchTvModel>)
+    func didSearchMovie(response: ResponseModel<MovieModel>)
+    func didSearchTv(response: ResponseModel<TvModel>)
 
     
 }

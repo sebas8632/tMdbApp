@@ -18,7 +18,7 @@ class SearchTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    var movieInfo: SearchMovieModel? {
+    var movieInfo: MovieModel? {
         didSet {
             titleLabel.text = movieInfo?.title
             releaseDateLabel.text = movieInfo?.releaseDate
@@ -28,7 +28,7 @@ class SearchTableViewCell: UITableViewCell {
         }
     }
 
-    var serieInfo: SearchTvModel? {
+    var serieInfo: TvModel? {
         didSet {
             titleLabel.text = serieInfo?.name
             releaseDateLabel.text = serieInfo?.firstAirDate

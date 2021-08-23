@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct SearchTvModel: Codable {
+struct TvModel: Codable {
     
     var id: Int
     var firstAirDate: String?

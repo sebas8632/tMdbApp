@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct SearchMovieModel: Codable {
+struct MovieModel: Codable {
     var id: Int
     var title: String
     var posterPath: String?

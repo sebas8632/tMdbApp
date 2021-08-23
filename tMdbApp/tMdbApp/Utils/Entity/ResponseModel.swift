@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct SearchResponseModel<T:Codable>: Codable {
+struct ResponseModel<T:Codable>: Codable {
     var page: Int
     var results: [T]?
     var totalPages: Int
