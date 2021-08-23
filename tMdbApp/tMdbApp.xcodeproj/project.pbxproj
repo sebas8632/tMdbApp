@@ -36,7 +36,7 @@
 		B165BBE426D1DBE800AB2601 /* Kingfisher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B165BBE326D1DBE800AB2601 /* Kingfisher.xcframework */; };
 		B165BBE526D1DBE800AB2601 /* Kingfisher.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B165BBE326D1DBE800AB2601 /* Kingfisher.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B165BBEA26D1DC6900AB2601 /* ImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBE926D1DC6900AB2601 /* ImageView+extension.swift */; };
-		B1CC2F8926D31E58004BE108 /* MoviesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2F8826D31E58004BE108 /* MoviesProtocol.swift */; };
+		B1CC2F8926D31E58004BE108 /* MoviesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2F8826D31E58004BE108 /* MoviesProtocols.swift */; };
 		B1CC2F8E26D32EDA004BE108 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2F8C26D32EDA004BE108 /* MoviesViewController.swift */; };
 		B1CC2F8F26D32EDA004BE108 /* MoviesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1CC2F8D26D32EDA004BE108 /* MoviesViewController.xib */; };
 		B1CC2F9326D33AB6004BE108 /* MoviesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2F9226D33AB6004BE108 /* MoviesRouter.swift */; };
@@ -118,7 +118,7 @@
 		B165BBDD26D1D28100AB2601 /* SearchMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieModel.swift; sourceTree = "<group>"; };
 		B165BBE326D1DBE800AB2601 /* Kingfisher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Kingfisher.xcframework; path = Carthage/Build/Kingfisher.xcframework; sourceTree = "<group>"; };
 		B165BBE926D1DC6900AB2601 /* ImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+extension.swift"; sourceTree = "<group>"; };
-		B1CC2F8826D31E58004BE108 /* MoviesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesProtocol.swift; sourceTree = "<group>"; };
+		B1CC2F8826D31E58004BE108 /* MoviesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesProtocols.swift; sourceTree = "<group>"; };
 		B1CC2F8C26D32EDA004BE108 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		B1CC2F8D26D32EDA004BE108 /* MoviesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesViewController.xib; sourceTree = "<group>"; };
 		B1CC2F9226D33AB6004BE108 /* MoviesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRouter.swift; sourceTree = "<group>"; };
@@ -450,7 +450,7 @@
 		B1CC2F8626D31E29004BE108 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B1CC2F8826D31E58004BE108 /* MoviesProtocol.swift */,
+				B1CC2F8826D31E58004BE108 /* MoviesProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -659,7 +659,7 @@
 				B1CC2FB526D348F5004BE108 /* MenuBarView.swift in Sources */,
 				B165BBA626D1B43500AB2601 /* SearchViewController.swift in Sources */,
 				B165BBB426D1BA0200AB2601 /* SearchComponentView.swift in Sources */,
-				B1CC2F8926D31E58004BE108 /* MoviesProtocol.swift in Sources */,
+				B1CC2F8926D31E58004BE108 /* MoviesProtocols.swift in Sources */,
 				B1CC2F9826D33B00004BE108 /* MoviesRemoteDataManager.swift in Sources */,
 				B165BB8C26D0DD8300AB2601 /* SearchType.swift in Sources */,
 				B165BBEA26D1DC6900AB2601 /* ImageView+extension.swift in Sources */,

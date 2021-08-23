@@ -17,8 +17,10 @@ class MenuBarCell: UICollectionViewCell {
             guard let highlight = highlight else { return }
             if highlight  {
                 self.underView.isHidden = false
+                titleLabel.textColor = .systemBlue
             } else {
                 self.underView.isHidden = true
+                titleLabel.textColor = .black
             }
         }
     }

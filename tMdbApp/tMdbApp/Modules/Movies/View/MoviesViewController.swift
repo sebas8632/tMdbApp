@@ -12,7 +12,7 @@ class MoviesViewController: UIViewController, MoviesViewProtocol {
     @IBOutlet weak var showComponentView: ShowComponentView!
     var menuBar: MenuBarView?
     
-    var movies: [SearchMovieModel] = [SearchMovieModel(id: 1, title: "Pelicula de prueba", posterPath: nil, releaseDate: "hoy", voteAverage: 2.0)]
+    var movies: [SearchMovieModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +20,9 @@ class MoviesViewController: UIViewController, MoviesViewProtocol {
         showComponentView.menuBarView.delegate = self
         setupTableView()
         menuBar = showComponentView.menuBarView
+        presenter?.getMovies()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let indexPathForFirstRow = IndexPath(item: 0, section: 0)
@@ -34,24 +35,40 @@ class MoviesViewController: UIViewController, MoviesViewProtocol {
     }
 }
 
-extension MoviesViewController: MoviesPresenterOutputProtocol { }
-
-extension MoviesViewController: MenuBarDelegate {
-    func menuActions(index: Int) {
-        let category: SearchCategory = SearchCategory(rawValue: index) ?? .popular
-        // TODO
+extension MoviesViewController: MoviesPresenterOutputProtocol {
+    func updateInitialData() {
+        movies = presenter?.popularMovies
+        showComponentView.contentTableView.reloadData()
     }
+    
+    
 }
 
 extension MoviesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        movies.count
+        movies?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchTableViewCell
-        let movie = movies[indexPath.row]
+        let movie = movies?[indexPath.row]
         cell.movieInfo = movie
         return cell
+    }
+}
+
+extension MoviesViewController: MenuBarDelegate {
+    func menuActions(index: Int) {
+        let category: SearchCategory = SearchCategory(rawValue: index) ?? .popular
+        
+        switch category {
+        case .popular:
+            movies = presenter?.popularMovies
+        case .topRated:
+            movies = presenter?.topRatedMovies
+        case .upcoming:
+            movies = presenter?.upcomingMovies
+        }
+        showComponentView.contentTableView.reloadData()
     }
 }

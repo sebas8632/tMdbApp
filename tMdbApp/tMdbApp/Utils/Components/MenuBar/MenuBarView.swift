@@ -62,6 +62,7 @@ extension MenuBarView: UICollectionViewDataSource {
         
         if indexPath.row == 0 {
             cell.underView.isHidden = false
+            cell.titleLabel.textColor = .systemBlue
         }
         return cell
     }
