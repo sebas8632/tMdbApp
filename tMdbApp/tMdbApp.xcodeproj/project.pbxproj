@@ -258,8 +258,7 @@
 		B165BB2526D0B38400AB2601 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B1CC2F8026D31DF8004BE108 /* Series */,
-				B1CC2F7F26D31DEC004BE108 /* Movies */,
+				B1CC2F7F26D31DEC004BE108 /* Show */,
 				B165BB2A26D0B42700AB2601 /* Search */,
 			);
 			path = Modules;
@@ -399,7 +398,7 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		B1CC2F7F26D31DEC004BE108 /* Movies */ = {
+		B1CC2F7F26D31DEC004BE108 /* Show */ = {
 			isa = PBXGroup;
 			children = (
 				B1CC2F8726D31E47004BE108 /* DataManager */,
@@ -410,14 +409,7 @@
 				B1CC2F8526D31E25004BE108 /* Router */,
 				B1CC2F8126D31DFF004BE108 /* View */,
 			);
-			path = Movies;
-			sourceTree = "<group>";
-		};
-		B1CC2F8026D31DF8004BE108 /* Series */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Series;
+			path = Show;
 			sourceTree = "<group>";
 		};
 		B1CC2F8126D31DFF004BE108 /* View */ = {

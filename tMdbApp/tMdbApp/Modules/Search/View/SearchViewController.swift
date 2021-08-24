@@ -11,26 +11,38 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
     var presenter: SearchPresenterInputProtocol?
     @IBOutlet weak var searchComponent: SearchComponentView!
     
-    var segmentedControl: UISegmentedControl?
     var searchBar: UISearchBar?
     var tableView: UITableView?
+    var menuBar: MenuBarView?
+    private var menuIndex: Int = 0
+    
+    var activityIndicator: UIActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigation()
         setupUI()
         setupTableView()
-        setupSegmentedControl()
+        createActivityIndicator()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let indexPathForFirstRow = IndexPath(item: 0, section: 0)
+        menuBar?.menuCollection.selectItem(at: indexPathForFirstRow, animated: true, scrollPosition: .left)
     }
 
     private func setupUI() {
         searchBar = searchComponent.searchBar
-        segmentedControl = searchComponent.segmentedControl
+        menuBar = searchComponent.menuBarView
         tableView = searchComponent.tableView
         
         tableView?.dataSource = self
         tableView?.delegate = self
         searchBar?.delegate = self
+        menuBar?.delegate = self
+        
+        menuBar?.items = ["Movies", "Series"]
     }
     
     private func setupNavigation() {
@@ -41,16 +53,10 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
         tableView?.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
     }
     
-    private func setupSegmentedControl() {
-        segmentedControl?.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
-
-    }
-    
-    @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
-            presenter?.resetData()
-            tableView?.tableFooterView = nil
-            tableView?.reloadData()
-        
+    private func createActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator?.center = view.center
+        view.addSubview(activityIndicator!)
     }
     
     private func createSpinnerFooter() -> UIView {
@@ -62,24 +68,24 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
         
         return footerView
     }
-
 }
 
 extension SearchViewController: SearchPresenterOutputProtocol {
     
     func updateTable() {
-            self.tableView?.tableFooterView = nil
-            self.tableView?.reloadData()            
+        self.tableView?.tableFooterView = nil
+        self.tableView?.reloadData()
+        activityIndicator?.stopAnimating()
+        UIApplication.shared.endIgnoringInteractionEvents()
+
     }
-    
-    
 }
 
 
 // MARK: Table View Data Source
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if segmentedControl?.selectedSegmentIndex == 0 {
+        if menuIndex == 0 {
             return presenter?.movieList?.count ?? 0
         }
         return presenter?.seriesList?.count ?? 0
@@ -87,9 +93,10 @@ extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchTableViewCell
-        if segmentedControl?.selectedSegmentIndex == 0 {
+        if menuIndex == 0 {
             cell.info = presenter?.movieList?[indexPath.row]
         } else {
+
             cell.info = presenter?.seriesList?[indexPath.row]
         }
         return cell
@@ -98,6 +105,7 @@ extension SearchViewController: UITableViewDataSource {
 
 extension SearchViewController: UITableViewDelegate {
     
+    // TODO 
 }
 
 // MARK: Search View Delegate
@@ -105,15 +113,17 @@ extension SearchViewController: UISearchBarDelegate {
 
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        let type: SearchType = SearchType(rawValue: segmentedControl.hashValue) ?? .movie
+        let type: SearchType = SearchType(rawValue: menuIndex) ?? .movie
         if let text = searchBar.text, !text.isEmpty {
             presenter?.search(type: type, query: text)
         }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let type: SearchType = SearchType(rawValue: segmentedControl?.selectedSegmentIndex ?? 0) ?? .movie
+        let type: SearchType = SearchType(rawValue: menuIndex) ?? .movie
         if let text = searchBar.text, !text.isEmpty {
+            activityIndicator?.startAnimating()
+            UIApplication.shared.beginIgnoringInteractionEvents()
             presenter?.resetData()
             presenter?.search(type: type, query: text)
         }
@@ -131,10 +141,21 @@ extension SearchViewController: UIScrollViewDelegate {
     }
     
     private func refreshSearch() {
-        let type: SearchType = SearchType(rawValue: segmentedControl?.selectedSegmentIndex ?? 0) ?? .movie
+        let type: SearchType = SearchType(rawValue: menuIndex) ?? .movie
         if let text = searchBar?.text, !text.isEmpty {
             tableView?.tableFooterView = createSpinnerFooter()
             presenter?.refreshSearch(type: type, query: text)
         }
     }
+}
+
+extension SearchViewController: MenuBarDelegate {
+    func menuActions(index: Int) {
+        menuIndex = index
+        presenter?.resetData()
+        tableView?.tableFooterView = nil
+        tableView?.reloadData()
+    }
+    
+    
 }

@@ -10,9 +10,9 @@ import UIKit
 class SearchComponentView: UIView {
 
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var menuBarView: MenuBarView!
     
 
     override init(frame: CGRect) {
