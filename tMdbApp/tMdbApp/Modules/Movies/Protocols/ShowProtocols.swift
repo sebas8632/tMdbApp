@@ -1,0 +1,71 @@
+//
+//  MoviesProtocol.swift
+//  tMdbApp
+//
+//  Created by Juan Sebastian Florez Saavedra on 22/08/21.
+//
+
+import Foundation
+import JSFSNetwork
+
+protocol ShowViewProtocol: class {
+    var presenter: ShowPresenterInputProtocol? { get set }
+}
+
+protocol ShowPresenterInputProtocol: class {
+    var view: ShowPresenterOutputProtocol? { get set }
+    var interactor: ShowInteractorInputProtocol? { get set }
+    var router: ShowRouterProtocol? { get set }
+    
+    var populars: [ShowContentProtocol]? { get set }
+    var topRated: [ShowContentProtocol]? { get set }
+    var upcoming: [ShowContentProtocol]? { get set }
+
+    var movies: [CategoryItem]? { get set }
+    var series: [CategoryItem]? { get set }
+
+    func getMovies()
+}
+
+protocol ShowPresenterOutputProtocol: class {
+    func updateInitialData()
+}
+
+protocol ShowInteractorInputProtocol: class {
+    var remoteDataManager: ShowRemoteDataManagerInputProtocol? { get set }
+    var presenter: ShowInteractorOutputProtocol? { get set }
+
+    var populars: [ShowContentProtocol]? { get set }
+    var topRated: [ShowContentProtocol]? { get set }
+    var upcoming: [ShowContentProtocol]? { get set }
+    
+    func getMovies()
+}
+
+protocol ShowInteractorOutputProtocol: class {
+    
+    func didGetMovies(popularMovies: [ShowContentProtocol],
+                      topRatedMovies: [ShowContentProtocol],
+                      upcomingMovies: [ShowContentProtocol])
+}
+
+protocol ShowRemoteDataManagerInputProtocol: class {
+    var sessionProvider: URLSessionProvider? { get set }
+    var interactor: ShowRemoteDataManagerOutputProtocol? { get set }
+
+    func searchPopularMovies(group: DispatchGroup)
+    func searchTopRatedMovies(group: DispatchGroup)
+    func searchUpcomingMovies(group: DispatchGroup)
+
+}
+
+protocol ShowRemoteDataManagerOutputProtocol: class {
+    
+    func didSearchPopularMovies(movies: [MovieModel])
+    func didSearchTopRatedMovies(movies: [MovieModel])
+    func didSearchUpcomingMovies(movies: [MovieModel])
+}
+
+protocol ShowRouterProtocol {
+    static func createModule() -> ShowViewController
+}

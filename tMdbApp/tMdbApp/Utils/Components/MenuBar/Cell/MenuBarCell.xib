@@ -23,10 +23,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPx-nf-aWQ">
-                        <rect key="frame" x="0.0" y="75" width="245" height="35"/>
+                        <rect key="frame" x="0.0" y="105" width="245" height="5"/>
                         <color key="backgroundColor" red="0.22232614436619719" green="0.564178036971831" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="35" id="XrG-Fm-Sxp"/>
+                            <constraint firstAttribute="height" constant="5" id="XrG-Fm-Sxp"/>
                         </constraints>
                     </view>
                 </subviews>

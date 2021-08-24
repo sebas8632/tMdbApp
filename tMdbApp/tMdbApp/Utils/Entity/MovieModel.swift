@@ -21,3 +21,16 @@ struct MovieModel: Codable {
         case voteAverage = "vote_average"
     }
 }
+
+extension MovieModel: ShowContentProtocol {
+
+    var date: String? {
+        return releaseDate
+    }
+    
+    var imagePath: String? {
+        return posterPath
+    }
+    
+    
+}

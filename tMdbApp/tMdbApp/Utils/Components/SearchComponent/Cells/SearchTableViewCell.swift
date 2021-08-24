@@ -17,32 +17,12 @@ class SearchTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
-    var movieInfo: MovieModel? {
+    var info: ShowContentProtocol? {
         didSet {
-            titleLabel.text = movieInfo?.title
-            releaseDateLabel.text = movieInfo?.releaseDate
-            voteAverageLabel.text = movieInfo?.voteAverage != nil ? "\(movieInfo?.voteAverage ?? 0)/5.0" : "N/A"
-            posterImageView.setImageFrom(url: movieInfo?.posterPath ?? "")
-            getImage(posterPath: movieInfo?.posterPath)
-        }
-    }
-
-    var serieInfo: TvModel? {
-        didSet {
-            titleLabel.text = serieInfo?.name
-            releaseDateLabel.text = serieInfo?.firstAirDate
-            voteAverageLabel.text = serieInfo?.voteAverage != nil ? "\(serieInfo?.voteAverage ?? 0)/5.0" : "N/A"
-            getImage(posterPath: serieInfo?.posterPath)
-        }
-    }
-    
-    private func getImage(posterPath: String?) {
-        if let posterPath = posterPath {
-            let path: String = "\(NetworkConstants.imageBaseURL)\(posterPath)"
-            posterImageView.setImageFrom(url: path)
-        } else {
-            posterImageView.image = UIImage(named: "pencil")
+            titleLabel.text = info?.title
+            releaseDateLabel.text = info?.date
+            voteAverageLabel.text = info?.voteAverage != nil ? "\(info?.voteAverage ?? 0)/5.0" : "N/A"
+            posterImageView.getImage(posterPath: info?.imagePath)
         }
     }
 }

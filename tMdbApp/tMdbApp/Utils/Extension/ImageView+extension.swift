@@ -21,4 +21,13 @@ extension UIImageView {
                 .transition(.fade(1))
             ])
     }
+    
+    func getImage(posterPath: String?) {
+        if let posterPath = posterPath {
+            let path: String = "\(NetworkConstants.imageBaseURL)\(posterPath)"
+            self.setImageFrom(url: path)
+        } else {
+            self.image = UIImage(named: "image_not_found")
+        }
+    }
 }

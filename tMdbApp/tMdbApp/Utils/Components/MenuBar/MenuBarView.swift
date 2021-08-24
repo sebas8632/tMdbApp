@@ -82,3 +82,10 @@ extension MenuBarView: UICollectionViewDelegate {
     }
 }
 
+extension MenuBarView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                                layout collectionViewLayout: UICollectionViewLayout,
+                                sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.size.width / CGFloat(items?.count ?? 1), height: collectionView.bounds.size.height)
+    }
+}

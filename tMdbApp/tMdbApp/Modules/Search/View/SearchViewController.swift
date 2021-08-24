@@ -88,9 +88,9 @@ extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchTableViewCell
         if segmentedControl?.selectedSegmentIndex == 0 {
-            cell.movieInfo = presenter?.movieList?[indexPath.row]
+            cell.info = presenter?.movieList?[indexPath.row]
         } else {
-            cell.serieInfo = presenter?.seriesList?[indexPath.row]
+            cell.info = presenter?.seriesList?[indexPath.row]
         }
         return cell
     }

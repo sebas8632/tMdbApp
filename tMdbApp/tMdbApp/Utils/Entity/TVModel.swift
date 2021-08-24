@@ -22,3 +22,19 @@ struct TvModel: Codable {
         case voteAverage = "vote_average"
     }
 }
+
+extension TvModel: ShowContentProtocol {
+
+    var title: String  {
+        return name
+    }
+    
+    var date: String? {
+        return firstAirDate
+    }
+    
+    var imagePath: String? {
+        return posterPath
+    }
+}
+

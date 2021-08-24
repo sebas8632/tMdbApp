@@ -8,14 +8,18 @@
 import Foundation
 import JSFSNetwork
 
-class MoviesRouter: MoviesRouterProtocol {
-    static func createModule() -> MoviesViewController {
+class MoviesRouter: ShowRouterProtocol {
+    static func createModule() -> ShowViewController {
         
-        let view: MoviesViewProtocol & MoviesPresenterOutputProtocol = MoviesViewController()
-        let presenter: MoviesPresenterInputProtocol & MoviesInteractorOutputProtocol = MoviesPresenter()
-        let interactor: MoviesInteractorInputProtocol & MoviesRemoteDataManagerOutputProtocol = MoviesInteractor()
-        let remoteDataManager: MoviesRemoteDataManagerInputProtocol = MoviesRemoteDataManager()
-        let router: MoviesRouterProtocol = MoviesRouter()
+        typealias viewProtocols = ShowViewProtocol & ShowPresenterOutputProtocol
+        typealias presenterProtocols = ShowPresenterInputProtocol & ShowInteractorOutputProtocol
+        typealias interactorProtocols = ShowInteractorInputProtocol & ShowRemoteDataManagerOutputProtocol
+        
+        let view: viewProtocols = ShowViewController()
+        let presenter: presenterProtocols = ShowPresenter()
+        let interactor: interactorProtocols = ShowInteractor()
+        let remoteDataManager: ShowRemoteDataManagerInputProtocol = ShowRemoteDataManager()
+        let router: ShowRouterProtocol = MoviesRouter()
         
         view.presenter = presenter
         presenter.view = view
@@ -26,6 +30,6 @@ class MoviesRouter: MoviesRouterProtocol {
         remoteDataManager.interactor = interactor
         remoteDataManager.sessionProvider = URLSessionProvider()
         
-        return view as! MoviesViewController
+        return view as! ShowViewController
     }
 }

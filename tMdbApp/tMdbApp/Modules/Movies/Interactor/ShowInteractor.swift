@@ -1,5 +1,5 @@
 //
-//  MoviesInteractor.swift
+//  ShowInteractor.swift
 //  tMdbApp
 //
 //  Created by Juan Sebastian Florez Saavedra on 22/08/21.

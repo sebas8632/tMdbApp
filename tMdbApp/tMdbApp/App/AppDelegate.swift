@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         searchNavigation.viewControllers = [searchView]
         
         let moviesNavigation: UINavigationController = UINavigationController()
-        let moviesView: MoviesViewController = MoviesRouter.createModule()
+        let moviesView: ShowViewController = MoviesRouter.createModule()
         let movieItem: UITabBarItem = UITabBarItem()
         movieItem.title = "Movies"
         movieItem.image = UIImage(named: "movie")
