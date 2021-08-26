@@ -21,11 +21,11 @@ class SearchPresenter: SearchPresenterInputProtocol {
         // TODO
     }
     
-    func search(type: SearchType, query: String) {
+    func search(type: ShowType, query: String) {
         interactor?.search(type: type, query: query, page: actualPage ?? 1)
     }
     
-    func refreshSearch(type: SearchType, query: String) {
+    func refreshSearch(type: ShowType, query: String) {
         interactor?.refreshSearch(type: type, query: query, page: actualPage ?? 1)
     }
     

@@ -7,6 +7,7 @@
 
 import Foundation
 import JSFSNetwork
+import UIKit
 
 protocol ShowViewProtocol: class {
     var presenter: ShowPresenterInputProtocol? { get set }
@@ -25,6 +26,7 @@ protocol ShowPresenterInputProtocol: class {
     var series: [CategoryItem]? { get set }
 
     func getMovies()
+    func goToDetail(id: Int, type: ShowType)
 }
 
 protocol ShowPresenterOutputProtocol: class {
@@ -68,4 +70,5 @@ protocol ShowRemoteDataManagerOutputProtocol: class {
 
 protocol ShowRouterProtocol {
     static func createModule() -> ShowViewController
+    func presentDetail(id: Int, type: ShowType, view: UIViewController)
 }

@@ -23,6 +23,10 @@ class ShowPresenter: ShowPresenterInputProtocol {
     func getMovies() {
         interactor?.getMovies()
     }
+    
+    func goToDetail(id: Int, type: ShowType) {
+        router?.presentDetail(id: id, type: type, view: view as! ShowViewController)
+    }
 }
 
 extension ShowPresenter: ShowInteractorOutputProtocol {

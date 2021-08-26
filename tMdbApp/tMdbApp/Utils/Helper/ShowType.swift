@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum SearchType: Int {
+enum ShowType: Int {
     case movie = 0
     case tv
 
-    func getType(index: Int) -> SearchType {
+    func getType(index: Int) -> ShowType {
         return index == 0 ? .movie : .tv
     }
 }

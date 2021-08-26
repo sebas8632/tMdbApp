@@ -113,14 +113,14 @@ extension SearchViewController: UISearchBarDelegate {
 
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        let type: SearchType = SearchType(rawValue: menuIndex) ?? .movie
+        let type: ShowType = ShowType(rawValue: menuIndex) ?? .movie
         if let text = searchBar.text, !text.isEmpty {
             presenter?.search(type: type, query: text)
         }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let type: SearchType = SearchType(rawValue: menuIndex) ?? .movie
+        let type: ShowType = ShowType(rawValue: menuIndex) ?? .movie
         if let text = searchBar.text, !text.isEmpty {
             activityIndicator?.startAnimating()
             UIApplication.shared.beginIgnoringInteractionEvents()
@@ -141,7 +141,7 @@ extension SearchViewController: UIScrollViewDelegate {
     }
     
     private func refreshSearch() {
-        let type: SearchType = SearchType(rawValue: menuIndex) ?? .movie
+        let type: ShowType = ShowType(rawValue: menuIndex) ?? .movie
         if let text = searchBar?.text, !text.isEmpty {
             tableView?.tableFooterView = createSpinnerFooter()
             presenter?.refreshSearch(type: type, query: text)

@@ -7,8 +7,10 @@
 
 import Foundation
 import JSFSNetwork
+import UIKit
 
 class MoviesRouter: ShowRouterProtocol {
+    
     static func createModule() -> ShowViewController {
         
         typealias viewProtocols = ShowViewProtocol & ShowPresenterOutputProtocol
@@ -32,4 +34,11 @@ class MoviesRouter: ShowRouterProtocol {
         
         return view as! ShowViewController
     }
+    
+    func presentDetail(id: Int, type: ShowType, view: UIViewController) {
+        let viewController = view as? ShowViewController
+        let detailViewController: DetailViewController = DetailRouter.createModule(idShow: id, type: type)
+        viewController?.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
 }

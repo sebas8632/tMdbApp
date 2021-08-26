@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol CollectionDelegate {
+    func showDetail(by id: Int)
+}
+
 class ItemTableCell: UITableViewCell {
 
     @IBOutlet weak var componentCollectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    var actionsDelegate: CollectionDelegate?
     
     var items: [ShowContentProtocol]?
     var category: SearchCategory? {
@@ -48,6 +54,12 @@ extension ItemTableCell: UICollectionViewDataSource {
     
 }
 
+extension ItemTableCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let item = items?[indexPath.row] else { return }
+        actionsDelegate?.showDetail(by: item.id)
+    }
+}
 extension ItemTableCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {

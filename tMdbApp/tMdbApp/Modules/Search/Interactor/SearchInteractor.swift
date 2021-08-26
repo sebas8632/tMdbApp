@@ -14,7 +14,7 @@ class SearchInteractor: SearchInteractorInputProtocol {
     var presenter: SearchInteractorOutputProtocol?
     var remoteDataManager: SearchRemoteDataManagerInputProtocol?
     
-    func search(type: SearchType, query: String, page: Int) {
+    func search(type: ShowType, query: String, page: Int) {
         switch type {
         case .movie:
             remoteDataManager?.searchMovie(by: query, page: page)
@@ -23,7 +23,7 @@ class SearchInteractor: SearchInteractorInputProtocol {
         }
     }
     
-    func refreshSearch(type: SearchType, query: String, page: Int) {
+    func refreshSearch(type: ShowType, query: String, page: Int) {
         
         guard let remoteDataManager = remoteDataManager, let isPaginating = remoteDataManager.isPaginating else { return }
         

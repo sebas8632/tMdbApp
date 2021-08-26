@@ -8,6 +8,7 @@
 import Foundation
 
 protocol ShowContentProtocol {
+    var id: Int { get }
     var title: String { get }
     var date: String? { get }
     var voteAverage: Double? { get }

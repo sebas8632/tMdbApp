@@ -25,8 +25,8 @@ protocol SearchPresenterInputProtocol: class {
     var actualPage: Int? { get set }
     
     func viewDidLoad()
-    func search(type: SearchType, query: String)
-    func refreshSearch(type: SearchType, query: String)
+    func search(type: ShowType, query: String)
+    func refreshSearch(type: ShowType, query: String)
     func resetData()
 }
 
@@ -42,8 +42,8 @@ protocol SearchInteractorInputProtocol: class {
     var remoteDataManager: SearchRemoteDataManagerInputProtocol? { get set }
     var totalPages: Int? { get set }
 
-    func search(type: SearchType, query: String, page: Int)
-    func refreshSearch(type: SearchType, query: String, page: Int)
+    func search(type: ShowType, query: String, page: Int)
+    func refreshSearch(type: ShowType, query: String, page: Int)
 }
 
 

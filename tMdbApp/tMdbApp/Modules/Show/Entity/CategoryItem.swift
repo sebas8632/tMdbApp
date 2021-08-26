@@ -8,6 +8,7 @@
 import Foundation
 
 struct CategoryItem {
+    
     var category: SearchCategory
     var items: [ShowContentProtocol]
 }

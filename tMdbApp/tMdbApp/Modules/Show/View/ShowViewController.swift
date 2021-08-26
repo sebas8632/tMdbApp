@@ -13,6 +13,8 @@ class ShowViewController: UIViewController, ShowViewProtocol {
     var menuBar: MenuBarView?
     
     var items: [CategoryItem]?
+    
+    private var indexType: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,7 @@ extension ShowViewController: UITableViewDataSource {
         let item = items?[indexPath.row]
         cell.category = item?.category
         cell.items = item?.items
+        cell.actionsDelegate = self
         return cell
     }
 }
@@ -73,7 +76,8 @@ extension ShowViewController: UITableViewDelegate {
 
 extension ShowViewController: MenuBarDelegate {
     func menuActions(index: Int) {
-        let type: SearchType = SearchType(rawValue: index) ?? .movie
+        indexType = index
+        let type: ShowType = ShowType(rawValue: index) ?? .movie
         
         switch type {
         case .movie:
@@ -82,5 +86,12 @@ extension ShowViewController: MenuBarDelegate {
             items = presenter?.series
         }
         showComponentView.contentTableView.reloadData()
+    }
+}
+
+extension ShowViewController: CollectionDelegate {
+    func showDetail(by id: Int) {
+        guard let type = ShowType(rawValue: indexType) else { return }
+        presenter?.goToDetail(id: id, type: type)
     }
 }

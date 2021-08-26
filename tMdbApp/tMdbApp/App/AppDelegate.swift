@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let moviesNavigation: UINavigationController = UINavigationController()
         let moviesView: ShowViewController = MoviesRouter.createModule()
         let movieItem: UITabBarItem = UITabBarItem()
-        movieItem.title = "Movies"
+        movieItem.title = "Shows"
         movieItem.image = UIImage(named: "movie")
         moviesView.tabBarItem = movieItem
         moviesNavigation.viewControllers = [moviesView]
