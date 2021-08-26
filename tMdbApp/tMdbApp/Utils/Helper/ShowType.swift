@@ -9,9 +9,9 @@ import Foundation
 
 enum ShowType: Int {
     case movie = 0
-    case tv
+    case serie
 
     func getType(index: Int) -> ShowType {
-        return index == 0 ? .movie : .tv
+        return index == 0 ? .movie : .serie
     }
 }

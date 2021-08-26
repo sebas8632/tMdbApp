@@ -48,4 +48,40 @@ class ShowRemoteDataManager: ShowRemoteDataManagerInputProtocol {
             group.leave()
         })
     }
+    
+    func searchPopularSeries(group: DispatchGroup) {
+        sessionProvider?.request(type: ResponseModel<SerieModel>.self, service: SeriesService.getPopular, completion: { [weak self] (result) in
+            switch result {
+            case .success(let response):
+                self?.interactor?.didSearchPopularSeries(series: response.results ?? [])
+            case .failure(let networkError):
+                print(networkError)
+            }
+            group.leave()
+        })
+    }
+    
+    func searchTopRatedSeries(group: DispatchGroup) {
+        sessionProvider?.request(type: ResponseModel<SerieModel>.self, service: SeriesService.getTopRated, completion: { [weak self] (result) in
+            switch result {
+            case .success(let response):
+                self?.interactor?.didSearchTopRatedSeries(series: response.results ?? [])
+            case .failure(let networkError):
+                print(networkError)
+            }
+            group.leave()
+        })
+    }
+    
+    func searchUpcomingSeries(group: DispatchGroup) {
+        sessionProvider?.request(type: ResponseModel<SerieModel>.self, service: SeriesService.getUpcoming, completion: { [weak self] (result) in
+            switch result {
+            case .success(let response):
+                self?.interactor?.didSearchUpcomingSeries(series: response.results ?? [])
+            case .failure(let networkError):
+                print(networkError)
+            }
+            group.leave()
+        })
+    }
 }

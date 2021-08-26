@@ -30,6 +30,7 @@ class ItemTableCell: UITableViewCell {
                 titleLabel.text = "Upcoming"
                 
             }
+            componentCollectionView.reloadData()
         }
     }
     override func awakeFromNib() {

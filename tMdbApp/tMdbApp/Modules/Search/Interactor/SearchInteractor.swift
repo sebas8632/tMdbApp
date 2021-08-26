@@ -18,8 +18,8 @@ class SearchInteractor: SearchInteractorInputProtocol {
         switch type {
         case .movie:
             remoteDataManager?.searchMovie(by: query, page: page)
-        case .tv:
-            remoteDataManager?.searchTv(by: query, page: page)
+        case .serie:
+            remoteDataManager?.searchSerie(by: query, page: page)
         }
     }
     
@@ -34,8 +34,8 @@ class SearchInteractor: SearchInteractorInputProtocol {
         switch type {
         case .movie:
             remoteDataManager.searchMovie(by: query, page: page)
-        case .tv:
-            remoteDataManager.searchTv(by: query, page: page)
+        case .serie:
+            remoteDataManager.searchSerie(by: query, page: page)
             
         }
     }
@@ -51,9 +51,9 @@ extension SearchInteractor: SearchRemoteDataManagerOutputProtocol {
         self.presenter?.didSearchMovies(movies: movies, actualPage: response.page)
     }
     
-    func didSearchTv(response: ResponseModel<TvModel>) {
+    func didSearchTv(response: ResponseModel<SerieModel>) {
         totalPages = response.totalPages
-        let series: [TvModel] = response.results ?? []
+        let series: [SerieModel] = response.results ?? []
         self.remoteDataManager?.isPaginating = false
         self.presenter?.didSearchSeries(series: series, actualPage: response.page)
     }

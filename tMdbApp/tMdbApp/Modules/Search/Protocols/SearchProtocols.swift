@@ -7,7 +7,7 @@
 
 import Foundation
 import JSFSNetwork
-
+import UIKit
 protocol SearchViewInputProtocol: class {
     
     var presenter: SearchPresenterInputProtocol? { get set }
@@ -21,13 +21,15 @@ protocol SearchPresenterInputProtocol: class {
     var router: SearchRouterProtocol? { get set }
     
     var movieList: [MovieModel]? { get set }
-    var seriesList: [TvModel]? { get set }
+    var seriesList: [SerieModel]? { get set }
     var actualPage: Int? { get set }
     
     func viewDidLoad()
     func search(type: ShowType, query: String)
     func refreshSearch(type: ShowType, query: String)
     func resetData()
+    
+    func goToDetail(id: Int, type: ShowType)
 }
 
 
@@ -49,7 +51,7 @@ protocol SearchInteractorInputProtocol: class {
 
 protocol SearchInteractorOutputProtocol: class {
     func didSearchMovies(movies: [MovieModel], actualPage: Int)
-    func didSearchSeries(series: [TvModel], actualPage: Int)
+    func didSearchSeries(series: [SerieModel], actualPage: Int)
 }
 
 
@@ -59,18 +61,18 @@ protocol SearchRemoteDataManagerInputProtocol: class {
     var isPaginating: Bool? { get set }
     
     func searchMovie(by query: String, page: Int)
-    func searchTv(by query: String, page: Int)
+    func searchSerie(by query: String, page: Int)
 }
 
 protocol SearchRemoteDataManagerOutputProtocol: class {
     func didSearchMovie(response: ResponseModel<MovieModel>)
-    func didSearchTv(response: ResponseModel<TvModel>)
+    func didSearchTv(response: ResponseModel<SerieModel>)
 
     
 }
 
 protocol SearchRouterProtocol: class {
-
     static func createModule() -> SearchViewController
-    
+    func presentDetail(id: Int, type: ShowType, view: UIViewController)
+
 }

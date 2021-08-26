@@ -26,11 +26,12 @@ protocol ShowPresenterInputProtocol: class {
     var series: [CategoryItem]? { get set }
 
     func getMovies()
+    func getSeries()
     func goToDetail(id: Int, type: ShowType)
 }
 
 protocol ShowPresenterOutputProtocol: class {
-    func updateInitialData()
+    func updateInitialData(type: ShowType)
 }
 
 protocol ShowInteractorInputProtocol: class {
@@ -42,6 +43,8 @@ protocol ShowInteractorInputProtocol: class {
     var upcoming: [ShowContentProtocol]? { get set }
     
     func getMovies()
+    func getSeries()
+    
 }
 
 protocol ShowInteractorOutputProtocol: class {
@@ -49,6 +52,10 @@ protocol ShowInteractorOutputProtocol: class {
     func didGetMovies(popularMovies: [ShowContentProtocol],
                       topRatedMovies: [ShowContentProtocol],
                       upcomingMovies: [ShowContentProtocol])
+    
+    func didGetSeries(popularSeries: [ShowContentProtocol],
+                      topRatedSeries: [ShowContentProtocol],
+                      upcomingSeries: [ShowContentProtocol])
 }
 
 protocol ShowRemoteDataManagerInputProtocol: class {
@@ -58,6 +65,10 @@ protocol ShowRemoteDataManagerInputProtocol: class {
     func searchPopularMovies(group: DispatchGroup)
     func searchTopRatedMovies(group: DispatchGroup)
     func searchUpcomingMovies(group: DispatchGroup)
+    
+    func searchPopularSeries(group: DispatchGroup)
+    func searchTopRatedSeries(group: DispatchGroup)
+    func searchUpcomingSeries(group: DispatchGroup)
 
 }
 
@@ -66,6 +77,10 @@ protocol ShowRemoteDataManagerOutputProtocol: class {
     func didSearchPopularMovies(movies: [MovieModel])
     func didSearchTopRatedMovies(movies: [MovieModel])
     func didSearchUpcomingMovies(movies: [MovieModel])
+    
+    func didSearchPopularSeries(series: [SerieModel])
+    func didSearchTopRatedSeries(series: [SerieModel])
+    func didSearchUpcomingSeries(series: [SerieModel])
 }
 
 protocol ShowRouterProtocol {

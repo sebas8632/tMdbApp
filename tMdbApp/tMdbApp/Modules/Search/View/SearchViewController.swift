@@ -104,8 +104,24 @@ extension SearchViewController: UITableViewDataSource {
 }
 
 extension SearchViewController: UITableViewDelegate {
-    
-    // TODO 
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let presenter = presenter, let type: ShowType = ShowType(rawValue: menuIndex) else { return }
+        var id: Int
+        
+        if type == .movie {
+            guard let list = presenter.movieList else { return }
+            let item: MovieModel = list[indexPath.row]
+            id = item.id
+
+        } else {
+            guard let list = presenter.seriesList else { return }
+            let item: SerieModel = list[indexPath.row]
+            id = item.id
+        }
+        presenter.goToDetail(id: id, type: type)
+
+    }
 }
 
 // MARK: Search View Delegate

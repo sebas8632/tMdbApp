@@ -31,7 +31,7 @@
 		B165BBC726D1D16600AB2601 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBC526D1D16600AB2601 /* SearchTableViewCell.swift */; };
 		B165BBC826D1D16600AB2601 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B165BBC626D1D16600AB2601 /* SearchTableViewCell.xib */; };
 		B165BBD626D1D23F00AB2601 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBD526D1D23F00AB2601 /* ResponseModel.swift */; };
-		B165BBDA26D1D25F00AB2601 /* TVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBD926D1D25F00AB2601 /* TVModel.swift */; };
+		B165BBDA26D1D25F00AB2601 /* SerieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBD926D1D25F00AB2601 /* SerieModel.swift */; };
 		B165BBDE26D1D28100AB2601 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBDD26D1D28100AB2601 /* MovieModel.swift */; };
 		B165BBE426D1DBE800AB2601 /* Kingfisher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B165BBE326D1DBE800AB2601 /* Kingfisher.xcframework */; };
 		B165BBE526D1DBE800AB2601 /* Kingfisher.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B165BBE326D1DBE800AB2601 /* Kingfisher.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -49,10 +49,11 @@
 		B18946D726D744EA00DC32D0 /* DetailViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18946D626D744EA00DC32D0 /* DetailViewModelMapper.swift */; };
 		B18946E626D7524D00DC32D0 /* OverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18946E426D7524D00DC32D0 /* OverviewCell.swift */; };
 		B18946E726D7524D00DC32D0 /* OverviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B18946E526D7524D00DC32D0 /* OverviewCell.xib */; };
+		B18946F426D764A900DC32D0 /* SeriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18946F326D764A900DC32D0 /* SeriesService.swift */; };
 		B1CC2F8926D31E58004BE108 /* ShowProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2F8826D31E58004BE108 /* ShowProtocols.swift */; };
 		B1CC2F8E26D32EDA004BE108 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2F8C26D32EDA004BE108 /* ShowViewController.swift */; };
 		B1CC2F8F26D32EDA004BE108 /* ShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1CC2F8D26D32EDA004BE108 /* ShowViewController.xib */; };
-		B1CC2F9326D33AB6004BE108 /* MoviesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2F9226D33AB6004BE108 /* MoviesRouter.swift */; };
+		B1CC2F9326D33AB6004BE108 /* ShowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2F9226D33AB6004BE108 /* ShowRouter.swift */; };
 		B1CC2F9826D33B00004BE108 /* ShowRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2F9726D33B00004BE108 /* ShowRemoteDataManager.swift */; };
 		B1CC2F9C26D33B89004BE108 /* ShowInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2F9B26D33B89004BE108 /* ShowInteractor.swift */; };
 		B1CC2FA026D33BB8004BE108 /* ShowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2F9F26D33BB8004BE108 /* ShowPresenter.swift */; };
@@ -141,7 +142,7 @@
 		B165BBC526D1D16600AB2601 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		B165BBC626D1D16600AB2601 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		B165BBD526D1D23F00AB2601 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
-		B165BBD926D1D25F00AB2601 /* TVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVModel.swift; sourceTree = "<group>"; };
+		B165BBD926D1D25F00AB2601 /* SerieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieModel.swift; sourceTree = "<group>"; };
 		B165BBDD26D1D28100AB2601 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		B165BBE326D1DBE800AB2601 /* Kingfisher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Kingfisher.xcframework; path = Carthage/Build/Kingfisher.xcframework; sourceTree = "<group>"; };
 		B165BBE926D1DC6900AB2601 /* ImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+extension.swift"; sourceTree = "<group>"; };
@@ -158,10 +159,11 @@
 		B18946D626D744EA00DC32D0 /* DetailViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelMapper.swift; sourceTree = "<group>"; };
 		B18946E426D7524D00DC32D0 /* OverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCell.swift; sourceTree = "<group>"; };
 		B18946E526D7524D00DC32D0 /* OverviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCell.xib; sourceTree = "<group>"; };
+		B18946F326D764A900DC32D0 /* SeriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesService.swift; sourceTree = "<group>"; };
 		B1CC2F8826D31E58004BE108 /* ShowProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowProtocols.swift; sourceTree = "<group>"; };
 		B1CC2F8C26D32EDA004BE108 /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		B1CC2F8D26D32EDA004BE108 /* ShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowViewController.xib; sourceTree = "<group>"; };
-		B1CC2F9226D33AB6004BE108 /* MoviesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRouter.swift; sourceTree = "<group>"; };
+		B1CC2F9226D33AB6004BE108 /* ShowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRouter.swift; sourceTree = "<group>"; };
 		B1CC2F9726D33B00004BE108 /* ShowRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRemoteDataManager.swift; sourceTree = "<group>"; };
 		B1CC2F9B26D33B89004BE108 /* ShowInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInteractor.swift; sourceTree = "<group>"; };
 		B1CC2F9F26D33BB8004BE108 /* ShowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPresenter.swift; sourceTree = "<group>"; };
@@ -357,7 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				B165BBD526D1D23F00AB2601 /* ResponseModel.swift */,
-				B165BBD926D1D25F00AB2601 /* TVModel.swift */,
+				B165BBD926D1D25F00AB2601 /* SerieModel.swift */,
 				B165BBDD26D1D28100AB2601 /* MovieModel.swift */,
 				B1E5020226D44B100012D084 /* ShowContentProtocol.swift */,
 			);
@@ -367,7 +369,6 @@
 		B165BB3026D0B45000AB2601 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				B165BB3226D0B47100AB2601 /* Local */,
 				B165BB3126D0B46100AB2601 /* Remote */,
 			);
 			path = DataManager;
@@ -380,13 +381,6 @@
 				B165BB4426D0BFBD00AB2601 /* SearchRemoteDataManager.swift */,
 			);
 			path = Remote;
-			sourceTree = "<group>";
-		};
-		B165BB3226D0B47100AB2601 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Local;
 			sourceTree = "<group>";
 		};
 		B165BB3326D0B55200AB2601 /* Protocols */ = {
@@ -531,7 +525,7 @@
 		B1CC2F8526D31E25004BE108 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				B1CC2F9226D33AB6004BE108 /* MoviesRouter.swift */,
+				B1CC2F9226D33AB6004BE108 /* ShowRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -557,6 +551,7 @@
 			children = (
 				B1CC2F9726D33B00004BE108 /* ShowRemoteDataManager.swift */,
 				B1CC2FD026D372A5004BE108 /* MoviesService.swift */,
+				B18946F326D764A900DC32D0 /* SeriesService.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -872,6 +867,7 @@
 				B165BB8C26D0DD8300AB2601 /* ShowType.swift in Sources */,
 				B165BBEA26D1DC6900AB2601 /* ImageView+extension.swift in Sources */,
 				B165BB4126D0BE2C00AB2601 /* SearchInteractor.swift in Sources */,
+				B18946F426D764A900DC32D0 /* SeriesService.swift in Sources */,
 				B165BB7826D0CA3D00AB2601 /* SearchService.swift in Sources */,
 				B1CC2FD126D372A5004BE108 /* MoviesService.swift in Sources */,
 				B18946D326D744A800DC32D0 /* DetailViewModelMapperProtocol.swift in Sources */,
@@ -885,8 +881,8 @@
 				B189468F26D6D86100DC32D0 /* MovieDetailModel.swift in Sources */,
 				B1E501FE26D4473C0012D084 /* ItemCollectionCell.swift in Sources */,
 				B1E5021726D48F9B0012D084 /* CategoryItem.swift in Sources */,
-				B1CC2F9326D33AB6004BE108 /* MoviesRouter.swift in Sources */,
-				B165BBDA26D1D25F00AB2601 /* TVModel.swift in Sources */,
+				B1CC2F9326D33AB6004BE108 /* ShowRouter.swift in Sources */,
+				B165BBDA26D1D25F00AB2601 /* SerieModel.swift in Sources */,
 				B165BB3D26D0BD8800AB2601 /* SearchPresenter.swift in Sources */,
 				B1E5024826D54DBB0012D084 /* DetailRemoteDataManager.swift in Sources */,
 				B1CC2F8E26D32EDA004BE108 /* ShowViewController.swift in Sources */,

@@ -7,11 +7,18 @@
 
 import Foundation
 import JSFSNetwork
+import UIKit
 class SearchRouter: SearchRouterProtocol {
+    
     static func createModule() -> SearchViewController {
-        let view: SearchViewInputProtocol & SearchPresenterOutputProtocol = SearchViewController()
-        let presenter: SearchPresenterInputProtocol  & SearchInteractorOutputProtocol = SearchPresenter()
-        let interactor: SearchInteractorInputProtocol & SearchRemoteDataManagerOutputProtocol = SearchInteractor()
+        
+        typealias ViewProtocols = SearchViewInputProtocol & SearchPresenterOutputProtocol
+        typealias PresenterProtocols = SearchPresenterInputProtocol  & SearchInteractorOutputProtocol
+        typealias InteractorProtocols = SearchInteractorInputProtocol & SearchRemoteDataManagerOutputProtocol
+        
+        let view:  ViewProtocols = SearchViewController()
+        let presenter: PresenterProtocols = SearchPresenter()
+        let interactor: InteractorProtocols = SearchInteractor()
         let remoteDataManager: SearchRemoteDataManagerInputProtocol = SearchRemoteDataManager()
         let router: SearchRouterProtocol = SearchRouter()
         
@@ -27,5 +34,10 @@ class SearchRouter: SearchRouterProtocol {
         return view as! SearchViewController
     }
     
+    func presentDetail(id: Int, type: ShowType, view: UIViewController) {
+        let viewController = view as? SearchViewController
+        let detailViewController: DetailViewController = DetailRouter.createModule(idShow: id, type: type)
+        viewController?.navigationController?.pushViewController(detailViewController, animated: true)
+    }
     
 }

@@ -28,6 +28,7 @@ class DetailViewController: UIViewController, DetailViewProtocol {
     private func configTableView() {
         detailTableView.register(UINib(nibName: "MainInfoCell", bundle: nil), forCellReuseIdentifier: "MainInfoCell")
         detailTableView.register(UINib(nibName: "OverviewCell", bundle: nil), forCellReuseIdentifier: "OverviewCell")
+        detailTableView.separatorColor = .systemBackground
         detailTableView.dataSource = self
     }
     

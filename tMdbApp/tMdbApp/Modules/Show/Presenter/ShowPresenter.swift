@@ -24,12 +24,18 @@ class ShowPresenter: ShowPresenterInputProtocol {
         interactor?.getMovies()
     }
     
+    func getSeries() {
+        interactor?.getSeries()
+    }
+    
+    
     func goToDetail(id: Int, type: ShowType) {
         router?.presentDetail(id: id, type: type, view: view as! ShowViewController)
     }
 }
 
 extension ShowPresenter: ShowInteractorOutputProtocol {
+    
     func didGetMovies(popularMovies: [ShowContentProtocol], topRatedMovies: [ShowContentProtocol], upcomingMovies: [ShowContentProtocol]) {
         self.populars = popularMovies
         self.topRated = topRatedMovies
@@ -39,8 +45,19 @@ extension ShowPresenter: ShowInteractorOutputProtocol {
                   CategoryItem(category: .topRated, items: topRatedMovies),
                   CategoryItem(category: .upcoming, items: upcomingMovies)
         ]
-        view?.updateInitialData()
+        view?.updateInitialData(type: .movie)
     }
     
+    func didGetSeries(popularSeries: [ShowContentProtocol], topRatedSeries: [ShowContentProtocol], upcomingSeries: [ShowContentProtocol]) {
+        self.populars = popularSeries
+        self.topRated = topRatedSeries
+        self.upcoming = upcomingSeries
+        
+        series = [CategoryItem(category: .popular, items: popularSeries),
+                  CategoryItem(category: .topRated, items: topRatedSeries),
+                  CategoryItem(category: .upcoming, items: upcomingSeries)
+        ]
+        view?.updateInitialData(type: .serie)
+    }
     
 }

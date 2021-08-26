@@ -28,8 +28,8 @@ class SearchRemoteDataManager: SearchRemoteDataManagerInputProtocol {
         })
     }
     
-    func searchTv(by query: String, page: Int) {
-        sessionProvider?.request(type: ResponseModel<TvModel>.self, service: SearchService.searchTv(query: query, page: page), completion: { [weak self] (result) in
+    func searchSerie(by query: String, page: Int) {
+        sessionProvider?.request(type: ResponseModel<SerieModel>.self, service: SearchService.searchTv(query: query, page: page), completion: { [weak self] (result) in
             switch result {
             case .success(let result):
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

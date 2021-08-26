@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct TvModel: Codable {
+struct SerieModel: Codable {
     
     var id: Int
     var firstAirDate: String?
@@ -23,7 +23,7 @@ struct TvModel: Codable {
     }
 }
 
-extension TvModel: ShowContentProtocol {
+extension SerieModel: ShowContentProtocol {
 
     var title: String  {
         return name

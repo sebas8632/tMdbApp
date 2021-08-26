@@ -20,7 +20,7 @@ class DetailInteractor: DetailInteractorInputProtocol {
         switch type {
         case .movie:
             remoteDataManager?.fetchMovieDetail(idShow: id)
-        case .tv:
+        case .serie:
             //TODO
             break
         case .none:

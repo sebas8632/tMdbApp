@@ -8,7 +8,7 @@
 import Foundation
 
 class ShowInteractor: ShowInteractorInputProtocol {
-
+    
     var populars: [ShowContentProtocol]?
     var topRated: [ShowContentProtocol]?
     var upcoming: [ShowContentProtocol]?
@@ -30,13 +30,33 @@ class ShowInteractor: ShowInteractorInputProtocol {
         
         group.notify(queue: .main) { [weak self] in
             self?.presenter?.didGetMovies(popularMovies: self?.populars ?? [],
-                                    topRatedMovies: self?.topRated ?? [],
-                                    upcomingMovies: self?.upcoming ?? [])
+                                          topRatedMovies: self?.topRated ?? [],
+                                          upcomingMovies: self?.upcoming ?? [])
+        }
+    }
+    
+    func getSeries() {
+        let group = DispatchGroup()
+        
+        group.enter()
+        remoteDataManager?.searchPopularSeries(group: group)
+        
+        group.enter()
+        remoteDataManager?.searchTopRatedSeries(group: group)
+        
+        group.enter()
+        remoteDataManager?.searchUpcomingSeries(group: group)
+        
+        group.notify(queue: .main) { [weak self] in
+            self?.presenter?.didGetSeries(popularSeries: self?.populars ?? [],
+                                          topRatedSeries: self?.topRated ?? [],
+                                          upcomingSeries: self?.upcoming ?? [])
         }
     }
 }
 
 extension ShowInteractor: ShowRemoteDataManagerOutputProtocol {
+    
     func didSearchPopularMovies(movies: [MovieModel]) {
         populars = movies
     }
@@ -49,5 +69,15 @@ extension ShowInteractor: ShowRemoteDataManagerOutputProtocol {
         upcoming = movies
     }
     
+    func didSearchPopularSeries(series: [SerieModel]) {
+        populars = series
+    }
     
+    func didSearchTopRatedSeries(series: [SerieModel]) {
+        topRated = series
+    }
+    
+    func didSearchUpcomingSeries(series: [SerieModel]) {
+        upcoming = series
+    }
 }

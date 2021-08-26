@@ -14,7 +14,7 @@ class SearchPresenter: SearchPresenterInputProtocol {
     var router: SearchRouterProtocol?
     
     var movieList: [MovieModel]? = []
-    var seriesList: [TvModel]? = []
+    var seriesList: [SerieModel]? = []
     var actualPage: Int? = 1
 
     func viewDidLoad() {
@@ -35,6 +35,9 @@ class SearchPresenter: SearchPresenterInputProtocol {
         actualPage = 1
     }
     
+    func goToDetail(id: Int, type: ShowType) {
+        router?.presentDetail(id: id, type: type, view: view as! SearchViewController)
+    }
 }
 
 
@@ -50,7 +53,7 @@ extension SearchPresenter: SearchInteractorOutputProtocol {
         view?.updateTable()
     }
     
-    func didSearchSeries(series: [TvModel], actualPage: Int) {
+    func didSearchSeries(series: [SerieModel], actualPage: Int) {
         if actualPage != 1 {
             self.actualPage = actualPage + 1
             seriesList?.append(contentsOf: series)

@@ -15,7 +15,7 @@ class ShowViewController: UIViewController, ShowViewProtocol {
     var items: [CategoryItem]?
     
     private var indexType: Int = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showComponentView.menuBarView.items = ["Movies", "Series"]
@@ -30,7 +30,7 @@ class ShowViewController: UIViewController, ShowViewProtocol {
         let indexPathForFirstRow = IndexPath(item: 0, section: 0)
         showComponentView.menuBarView.menuCollection.selectItem(at: indexPathForFirstRow, animated: true, scrollPosition: .left)
     }
-
+    
     private func setupTableView() {
         showComponentView.contentTableView.register(UINib(nibName: "ItemTableCell", bundle: nil), forCellReuseIdentifier: "ItemTableCell")
         showComponentView.contentTableView.dataSource = self
@@ -41,8 +41,14 @@ class ShowViewController: UIViewController, ShowViewProtocol {
 // MARK: Presenter Output
 
 extension ShowViewController: ShowPresenterOutputProtocol {
-    func updateInitialData() {
-        items = presenter?.movies
+    func updateInitialData(type: ShowType) {
+        
+        switch type {
+        case .movie:
+            items = presenter?.movies
+        case .serie:
+            items = presenter?.series
+        }
         showComponentView.contentTableView.reloadData()
     }
 }
@@ -81,8 +87,10 @@ extension ShowViewController: MenuBarDelegate {
         
         switch type {
         case .movie:
+            presenter?.getMovies()
             items = presenter?.movies
-        case .tv:
+        case .serie:
+            presenter?.getSeries()
             items = presenter?.series
         }
         showComponentView.contentTableView.reloadData()
