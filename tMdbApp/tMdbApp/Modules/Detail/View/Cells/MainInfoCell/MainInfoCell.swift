@@ -18,8 +18,9 @@ class MainInfoCell: UITableViewCell {
     var info: MainInfoViewModelItem? {
         didSet {
             let vote = info?.voteAverage != nil ? "\(info?.voteAverage ?? 0)" : "N/A"
+            let tagline: String = info?.tagline != nil ? (info?.tagline ?? "NO TAGLINE" ) : "NO TAGLINE"
             titleLabel.text = info?.title
-            taglineLabel.text = info?.tagline ?? "NO TAGLINE"
+            taglineLabel.text = !tagline.isEmpty ? tagline : "NO TAGLINE"
             dateLabel.text = info?.releaseDate ?? "NO RELEASE DATE"
             voteLabel.text = vote
             posterImage.getImage(posterPath: info?.posterPath)

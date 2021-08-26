@@ -12,4 +12,7 @@ enum DetailViewModelItemType {
     case overview
     case genres
     case companies
+    case datesOnAir
+    case seasonInfo
+    case createdBy
 }

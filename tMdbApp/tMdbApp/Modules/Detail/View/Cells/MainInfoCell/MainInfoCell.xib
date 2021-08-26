@@ -23,28 +23,28 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ffT-Ee-LkY">
-                        <rect key="frame" x="36" y="232" width="400" height="75"/>
+                        <rect key="frame" x="28" y="232" width="416" height="75"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNq-Ob-m7u">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="19"/>
+                                <rect key="frame" x="0.0" y="0.0" width="416" height="19"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLI-Vb-mQ8">
-                                <rect key="frame" x="0.0" y="19" width="400" height="18.5"/>
+                                <rect key="frame" x="0.0" y="19" width="416" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbS-Oc-Xkv">
-                                <rect key="frame" x="0.0" y="37.5" width="400" height="19"/>
+                                <rect key="frame" x="0.0" y="37.5" width="416" height="19"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-wh-sRw">
-                                <rect key="frame" x="0.0" y="56.5" width="400" height="18.5"/>
+                                <rect key="frame" x="0.0" y="56.5" width="416" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,9 +56,9 @@
                     <constraint firstAttribute="bottomMargin" secondItem="ffT-Ee-LkY" secondAttribute="bottom" constant="8" id="CT3-NH-Bsf"/>
                     <constraint firstAttribute="trailing" secondItem="a5k-Vb-Jd7" secondAttribute="trailing" id="HMg-tC-3TO"/>
                     <constraint firstItem="a5k-Vb-Jd7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ZQP-WG-ghi"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="ffT-Ee-LkY" secondAttribute="trailing" constant="16" id="e9n-Xk-Emf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ffT-Ee-LkY" secondAttribute="trailing" constant="8" id="e9n-Xk-Emf"/>
                     <constraint firstItem="ffT-Ee-LkY" firstAttribute="top" secondItem="a5k-Vb-Jd7" secondAttribute="bottom" constant="16" id="msh-yu-qYU"/>
-                    <constraint firstItem="ffT-Ee-LkY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="nBG-uo-jnp"/>
+                    <constraint firstItem="ffT-Ee-LkY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="nBG-uo-jnp"/>
                     <constraint firstItem="a5k-Vb-Jd7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="s9C-Ae-uf8"/>
                 </constraints>
             </tableViewCellContentView>

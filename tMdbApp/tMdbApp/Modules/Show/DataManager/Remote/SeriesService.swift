@@ -24,7 +24,7 @@ enum SeriesService: ServiceProtocol  {
         case .getTopRated:
             return "/tv/top_rated"
         case .getUpcoming:
-            return "/tv/upcoming"
+            return "/tv/latest"
         }
     }
     

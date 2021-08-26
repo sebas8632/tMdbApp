@@ -9,5 +9,5 @@ import Foundation
 
 protocol DetailViewModelMapperProtocol {
     func mapMovieToDetailViewModel(movie: MovieDetailModel) -> [DetailViewModelItemProtocol]
-   // func mapSerieToDetailViewModel() -> DetailViewModelItem
+    func mapSerieToDetailViewModel(serie: SerieDetailModel) -> [DetailViewModelItemProtocol]
 }

@@ -30,4 +30,31 @@ class DetailViewModelMapper: DetailViewModelMapperProtocol {
         
         return items
     }
+    
+    func mapSerieToDetailViewModel(serie: SerieDetailModel) -> [DetailViewModelItemProtocol] {
+        var items = [DetailViewModelItemProtocol]()
+        
+        let mainInfo: MainInfoViewModelItem = MainInfoViewModelItem(posterPath: serie.posterPath, title: serie.name, tagline: serie.tagline, releaseDate: "", voteAverage: serie.voteAverage)
+        items.append(mainInfo)
+        
+        let datesOnAir: DatesOnAirViewModelItem = DatesOnAirViewModelItem(firstAirDate: serie.firstAirDate, lasAirDate: serie.lastAirDate)
+        items.append(datesOnAir)
+        let overview: OverviewViewModelItem = OverviewViewModelItem(overview: serie.overview)
+        items.append(overview)
+        
+        let seasonInfo: SeasonInfoViewModelItem = SeasonInfoViewModelItem(numberOfSeasons: serie.numberOfSeasons, numberOfEpisodes: serie.numberOfEpisodes)
+        items.append(seasonInfo)
+        
+        let companies = serie.getCompanies()
+        if !companies.isEmpty {
+            items.append(CompaniesViewModelItem(companies: companies))
+        }
+        
+        let creators = serie.createdBy
+        if !creators.isEmpty {
+            items.append(CreatedByViewModelItem(creators: creators))
+        }
+        
+        return items
+    }
 }

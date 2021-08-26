@@ -21,8 +21,7 @@ class DetailInteractor: DetailInteractorInputProtocol {
         case .movie:
             remoteDataManager?.fetchMovieDetail(idShow: id)
         case .serie:
-            //TODO
-            break
+            remoteDataManager?.fetchSerieDetail(idShow: id)
         case .none:
             break
         }
@@ -31,6 +30,7 @@ class DetailInteractor: DetailInteractorInputProtocol {
 }
 
 extension DetailInteractor: DetailRemoteDataManagerOutputProtocol {
+    
     func didFetchMovieDetail(movieDetail: MovieDetailModel) {
         guard let mapper = detailViewModelMapper else { return }
         
@@ -38,5 +38,9 @@ extension DetailInteractor: DetailRemoteDataManagerOutputProtocol {
         presenter?.didGetDetailViewModel(items: items)
     }
     
-    
+    func didFetchSerieDetail(serieDetail: SerieDetailModel) {
+        guard let mapper = detailViewModelMapper else { return }
+        let items: [DetailViewModelItemProtocol] = mapper.mapSerieToDetailViewModel(serie: serieDetail)
+        presenter?.didGetDetailViewModel(items: items)
+    }
 }

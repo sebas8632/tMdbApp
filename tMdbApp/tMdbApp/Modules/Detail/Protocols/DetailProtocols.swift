@@ -49,11 +49,13 @@ protocol DetailRemoteDataManagerInputProtocol: class {
     var interactor: DetailRemoteDataManagerOutputProtocol? { get set }
     
     func fetchMovieDetail(idShow: Int)
+    func fetchSerieDetail(idShow: Int)
 
 }
 
 protocol DetailRemoteDataManagerOutputProtocol: class {
     func didFetchMovieDetail(movieDetail: MovieDetailModel)
+    func didFetchSerieDetail(serieDetail: SerieDetailModel)
 }
 
 protocol DetailRouterProtocol: class {

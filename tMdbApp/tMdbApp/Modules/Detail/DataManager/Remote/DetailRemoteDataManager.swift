@@ -9,6 +9,7 @@ import Foundation
 import JSFSNetwork
 
 class DetailRemoteDataManager: DetailRemoteDataManagerInputProtocol {
+    
     var sessionProvider: ProviderProtocol?
     var interactor: DetailRemoteDataManagerOutputProtocol?
 
@@ -24,4 +25,14 @@ class DetailRemoteDataManager: DetailRemoteDataManagerInputProtocol {
         })
     }
 
+    func fetchSerieDetail(idShow: Int) {
+        sessionProvider?.request(type: SerieDetailModel.self, service: DetailService.serie(id: "\(idShow)"), completion: { [weak self] (result) in
+            switch result {
+            case .success(let model):
+                self?.interactor?.didFetchSerieDetail(serieDetail: model)
+            case .failure(let networkError):
+            print(networkError)
+            }
+        })
+    }
 }

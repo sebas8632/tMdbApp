@@ -17,7 +17,7 @@ class OverviewCell: UITableViewCell {
 
     var overviewInfo: String? {
         didSet {
-            overviewLabel.text = overviewInfo
+            overviewLabel.text = !(overviewInfo?.isEmpty ?? false) ? overviewInfo : "NO OVERVIEW"
         }
     }
 }

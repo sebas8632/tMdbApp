@@ -54,8 +54,7 @@ protocol ShowInteractorOutputProtocol: class {
                       upcomingMovies: [ShowContentProtocol])
     
     func didGetSeries(popularSeries: [ShowContentProtocol],
-                      topRatedSeries: [ShowContentProtocol],
-                      upcomingSeries: [ShowContentProtocol])
+                      topRatedSeries: [ShowContentProtocol])
 }
 
 protocol ShowRemoteDataManagerInputProtocol: class {
@@ -68,7 +67,6 @@ protocol ShowRemoteDataManagerInputProtocol: class {
     
     func searchPopularSeries(group: DispatchGroup)
     func searchTopRatedSeries(group: DispatchGroup)
-    func searchUpcomingSeries(group: DispatchGroup)
 
 }
 
@@ -80,7 +78,6 @@ protocol ShowRemoteDataManagerOutputProtocol: class {
     
     func didSearchPopularSeries(series: [SerieModel])
     func didSearchTopRatedSeries(series: [SerieModel])
-    func didSearchUpcomingSeries(series: [SerieModel])
 }
 
 protocol ShowRouterProtocol {

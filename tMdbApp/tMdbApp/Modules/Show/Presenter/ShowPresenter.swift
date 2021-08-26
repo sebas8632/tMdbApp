@@ -48,14 +48,12 @@ extension ShowPresenter: ShowInteractorOutputProtocol {
         view?.updateInitialData(type: .movie)
     }
     
-    func didGetSeries(popularSeries: [ShowContentProtocol], topRatedSeries: [ShowContentProtocol], upcomingSeries: [ShowContentProtocol]) {
+    func didGetSeries(popularSeries: [ShowContentProtocol], topRatedSeries: [ShowContentProtocol]) {
         self.populars = popularSeries
         self.topRated = topRatedSeries
-        self.upcoming = upcomingSeries
         
         series = [CategoryItem(category: .popular, items: popularSeries),
-                  CategoryItem(category: .topRated, items: topRatedSeries),
-                  CategoryItem(category: .upcoming, items: upcomingSeries)
+                  CategoryItem(category: .topRated, items: topRatedSeries)
         ]
         view?.updateInitialData(type: .serie)
     }

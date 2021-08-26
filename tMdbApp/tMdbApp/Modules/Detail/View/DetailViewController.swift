@@ -28,8 +28,14 @@ class DetailViewController: UIViewController, DetailViewProtocol {
     private func configTableView() {
         detailTableView.register(UINib(nibName: "MainInfoCell", bundle: nil), forCellReuseIdentifier: "MainInfoCell")
         detailTableView.register(UINib(nibName: "OverviewCell", bundle: nil), forCellReuseIdentifier: "OverviewCell")
+        detailTableView.register(UINib(nibName: "DatesOnAirCell", bundle: nil), forCellReuseIdentifier: "DatesOnAirCell")
+        detailTableView.register(UINib(nibName: "SeasonInfoCell", bundle: nil), forCellReuseIdentifier: "SeasonInfoCell")
+        detailTableView.register(UINib(nibName: "CreatedByCell", bundle: nil), forCellReuseIdentifier: "CreatedByCell")
         detailTableView.separatorColor = .systemBackground
         detailTableView.dataSource = self
+        detailTableView.delegate = self
+        detailTableView.rowHeight = UITableView.automaticDimension
+
     }
     
     private func createActivityIndicator() {
@@ -79,6 +85,22 @@ extension DetailViewController: UITableViewDataSource {
             cell.textLabel?.text = companies.companies?[indexPath.row]
             return cell
 
+        case .datesOnAir:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DatesOnAirCell") as! DatesOnAirCell
+            let datesOnAir: DatesOnAirViewModelItem = items[indexPath.section] as! DatesOnAirViewModelItem
+            cell.datesOnAir = datesOnAir
+            return cell
+        case .seasonInfo:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SeasonInfoCell") as! SeasonInfoCell
+            let seasonInfo: SeasonInfoViewModelItem = items[indexPath.section] as! SeasonInfoViewModelItem
+            cell.info = seasonInfo
+            return cell
+        case .createdBy:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CreatedByCell") as! CreatedByCell
+            let creators: CreatedByViewModelItem = items[indexPath.section] as! CreatedByViewModelItem
+            let item: CreatedByViewModelItem = CreatedByViewModelItem(creators: creators.creators)
+            cell.item = item
+            return cell
         }
     }
     
@@ -86,7 +108,18 @@ extension DetailViewController: UITableViewDataSource {
         return presenter?.detailItems?[section].sectionTitle
     }
     
-    
+}
+
+extension DetailViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        guard let items = presenter?.detailItems else { return 0}
+//        let type: DetailViewModelItemType = items[indexPath.section].type
+//
+//        if type == .createdBy {
+//            return CGFloat(400)
+//        }
+//        return 100
+//    }
 }
 
 extension DetailViewController: DetailPresenterOutputProtocol {

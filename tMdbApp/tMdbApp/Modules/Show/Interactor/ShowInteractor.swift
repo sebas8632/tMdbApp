@@ -44,13 +44,10 @@ class ShowInteractor: ShowInteractorInputProtocol {
         group.enter()
         remoteDataManager?.searchTopRatedSeries(group: group)
         
-        group.enter()
-        remoteDataManager?.searchUpcomingSeries(group: group)
         
         group.notify(queue: .main) { [weak self] in
             self?.presenter?.didGetSeries(popularSeries: self?.populars ?? [],
-                                          topRatedSeries: self?.topRated ?? [],
-                                          upcomingSeries: self?.upcoming ?? [])
+                                          topRatedSeries: self?.topRated ?? [])
         }
     }
 }
