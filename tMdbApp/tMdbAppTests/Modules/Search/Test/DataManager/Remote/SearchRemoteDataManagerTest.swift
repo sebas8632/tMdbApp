@@ -24,7 +24,7 @@ class SearchRemoteDataManagerTest: XCTestCase {
     try super.tearDownWithError()
     sut?.interactor = nil
     sut?.sessionProvider = nil
-    
+    sut = nil
     }
     
     

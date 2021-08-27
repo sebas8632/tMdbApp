@@ -43,6 +43,7 @@
 		B17E2EB426D86FB200FA0454 /* SearchMovie.json in Resources */ = {isa = PBXBuildFile; fileRef = B17E2EB326D86FB200FA0454 /* SearchMovie.json */; };
 		B17E2EBB26D8720200FA0454 /* FileManager+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2EBA26D8720200FA0454 /* FileManager+extension.swift */; };
 		B17E2EC326D876C200FA0454 /* SearchSerie.json in Resources */ = {isa = PBXBuildFile; fileRef = B17E2EC226D876C200FA0454 /* SearchSerie.json */; };
+		B17E2EC726D8807D00FA0454 /* SearchInteractorInputTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2EC626D8807D00FA0454 /* SearchInteractorInputTest.swift */; };
 		B189468F26D6D86100DC32D0 /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189468E26D6D86100DC32D0 /* MovieDetailModel.swift */; };
 		B189469B26D6FDB100DC32D0 /* MainInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189469926D6FDB100DC32D0 /* MainInfoCell.swift */; };
 		B189469C26D6FDB100DC32D0 /* MainInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B189469A26D6FDB100DC32D0 /* MainInfoCell.xib */; };
@@ -172,6 +173,7 @@
 		B17E2EB326D86FB200FA0454 /* SearchMovie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchMovie.json; sourceTree = "<group>"; };
 		B17E2EBA26D8720200FA0454 /* FileManager+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+extension.swift"; sourceTree = "<group>"; };
 		B17E2EC226D876C200FA0454 /* SearchSerie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchSerie.json; sourceTree = "<group>"; };
+		B17E2EC626D8807D00FA0454 /* SearchInteractorInputTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorInputTest.swift; sourceTree = "<group>"; };
 		B189468E26D6D86100DC32D0 /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
 		B189469926D6FDB100DC32D0 /* MainInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfoCell.swift; sourceTree = "<group>"; };
 		B189469A26D6FDB100DC32D0 /* MainInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainInfoCell.xib; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 		B17E2E8826D86AED00FA0454 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				B17E2EC626D8807D00FA0454 /* SearchInteractorInputTest.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -1109,6 +1112,7 @@
 				B17E2EBB26D8720200FA0454 /* FileManager+extension.swift in Sources */,
 				B17E2EA426D86DE900FA0454 /* MockSearchInteractorOutput.swift in Sources */,
 				B17E2EA926D86E4900FA0454 /* MockSearchRemoteDataManagerInput.swift in Sources */,
+				B17E2EC726D8807D00FA0454 /* SearchInteractorInputTest.swift in Sources */,
 				B17E2EAF26D86F2B00FA0454 /* MockSearchRemoteDataManagerOutput.swift in Sources */,
 				B17E2E9526D86BEA00FA0454 /* SearchRemoteDataManagerTest.swift in Sources */,
 			);
