@@ -122,7 +122,7 @@ extension SearchViewController: UITableViewDelegate {
             let item: SerieModel = list[indexPath.row]
             id = item.id
         }
-        presenter.goToDetail(id: id, type: type)
+        presenter.goToDetail(id: id, type: type, view: self)
 
     }
 }

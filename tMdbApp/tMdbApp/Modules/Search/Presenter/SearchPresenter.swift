@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 class SearchPresenter: SearchPresenterInputProtocol {
     
     var view: SearchPresenterOutputProtocol?
@@ -17,10 +17,6 @@ class SearchPresenter: SearchPresenterInputProtocol {
     var seriesList: [SerieModel]? = []
     var actualPage: Int? = 1
 
-    func viewDidLoad() {
-        // TODO
-    }
-    
     func search(type: ShowType, query: String) {
         interactor?.search(type: type, query: query, page: actualPage ?? 1)
     }
@@ -35,8 +31,8 @@ class SearchPresenter: SearchPresenterInputProtocol {
         actualPage = 1
     }
     
-    func goToDetail(id: Int, type: ShowType) {
-        router?.presentDetail(id: id, type: type, view: view as! SearchViewController)
+    func goToDetail(id: Int, type: ShowType, view: UIViewController) {
+        router?.presentDetail(id: id, type: type, view: view)
     }
 }
 

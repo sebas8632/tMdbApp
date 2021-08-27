@@ -24,12 +24,11 @@ protocol SearchPresenterInputProtocol: class {
     var seriesList: [SerieModel]? { get set }
     var actualPage: Int? { get set }
     
-    func viewDidLoad()
     func search(type: ShowType, query: String)
     func refreshSearch(type: ShowType, query: String)
     func resetData()
     
-    func goToDetail(id: Int, type: ShowType)
+    func goToDetail(id: Int, type: ShowType, view: UIViewController)
 }
 
 
