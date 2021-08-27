@@ -10,7 +10,6 @@
 		B165BAD726D0AD6900AB2601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BAD626D0AD6900AB2601 /* AppDelegate.swift */; };
 		B165BAE126D0AD6900AB2601 /* tMdbApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B165BADF26D0AD6900AB2601 /* tMdbApp.xcdatamodeld */; };
 		B165BAE326D0AD6B00AB2601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B165BAE226D0AD6B00AB2601 /* Assets.xcassets */; };
-		B165BAF126D0AD6C00AB2601 /* tMdbAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BAF026D0AD6C00AB2601 /* tMdbAppTests.swift */; };
 		B165BAFC26D0AD6C00AB2601 /* tMdbAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BAFB26D0AD6C00AB2601 /* tMdbAppUITests.swift */; };
 		B165BB0E26D0AE6300AB2601 /* JSFSNetwork.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B165BB0D26D0AE6300AB2601 /* JSFSNetwork.xcframework */; };
 		B165BB0F26D0AE6300AB2601 /* JSFSNetwork.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B165BB0D26D0AE6300AB2601 /* JSFSNetwork.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -36,6 +35,14 @@
 		B165BBE426D1DBE800AB2601 /* Kingfisher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B165BBE326D1DBE800AB2601 /* Kingfisher.xcframework */; };
 		B165BBE526D1DBE800AB2601 /* Kingfisher.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B165BBE326D1DBE800AB2601 /* Kingfisher.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B165BBEA26D1DC6900AB2601 /* ImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165BBE926D1DC6900AB2601 /* ImageView+extension.swift */; };
+		B17E2E9526D86BEA00FA0454 /* SearchRemoteDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2E9426D86BEA00FA0454 /* SearchRemoteDataManagerTest.swift */; };
+		B17E2E9E26D86CBD00FA0454 /* MockSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2E9D26D86CBD00FA0454 /* MockSessionProvider.swift */; };
+		B17E2EA426D86DE900FA0454 /* MockSearchInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2EA326D86DE900FA0454 /* MockSearchInteractorOutput.swift */; };
+		B17E2EA926D86E4900FA0454 /* MockSearchRemoteDataManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2EA826D86E4900FA0454 /* MockSearchRemoteDataManagerInput.swift */; };
+		B17E2EAF26D86F2B00FA0454 /* MockSearchRemoteDataManagerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2EAE26D86F2B00FA0454 /* MockSearchRemoteDataManagerOutput.swift */; };
+		B17E2EB426D86FB200FA0454 /* SearchMovie.json in Resources */ = {isa = PBXBuildFile; fileRef = B17E2EB326D86FB200FA0454 /* SearchMovie.json */; };
+		B17E2EBB26D8720200FA0454 /* FileManager+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2EBA26D8720200FA0454 /* FileManager+extension.swift */; };
+		B17E2EC326D876C200FA0454 /* SearchSerie.json in Resources */ = {isa = PBXBuildFile; fileRef = B17E2EC226D876C200FA0454 /* SearchSerie.json */; };
 		B189468F26D6D86100DC32D0 /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189468E26D6D86100DC32D0 /* MovieDetailModel.swift */; };
 		B189469B26D6FDB100DC32D0 /* MainInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189469926D6FDB100DC32D0 /* MainInfoCell.swift */; };
 		B189469C26D6FDB100DC32D0 /* MainInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B189469A26D6FDB100DC32D0 /* MainInfoCell.xib */; };
@@ -131,7 +138,6 @@
 		B165BAE226D0AD6B00AB2601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B165BAE726D0AD6B00AB2601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B165BAEC26D0AD6C00AB2601 /* tMdbAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tMdbAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B165BAF026D0AD6C00AB2601 /* tMdbAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tMdbAppTests.swift; sourceTree = "<group>"; };
 		B165BAF226D0AD6C00AB2601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B165BAF726D0AD6C00AB2601 /* tMdbAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tMdbAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B165BAFB26D0AD6C00AB2601 /* tMdbAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tMdbAppUITests.swift; sourceTree = "<group>"; };
@@ -158,6 +164,14 @@
 		B165BBDD26D1D28100AB2601 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		B165BBE326D1DBE800AB2601 /* Kingfisher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Kingfisher.xcframework; path = Carthage/Build/Kingfisher.xcframework; sourceTree = "<group>"; };
 		B165BBE926D1DC6900AB2601 /* ImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+extension.swift"; sourceTree = "<group>"; };
+		B17E2E9426D86BEA00FA0454 /* SearchRemoteDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRemoteDataManagerTest.swift; sourceTree = "<group>"; };
+		B17E2E9D26D86CBD00FA0454 /* MockSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockSessionProvider.swift; path = tMdbAppTests/Modules/Search/Test/DataManager/Remote/MockSessionProvider.swift; sourceTree = SOURCE_ROOT; };
+		B17E2EA326D86DE900FA0454 /* MockSearchInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockSearchInteractorOutput.swift; path = tMdbAppTests/Modules/Search/Test/DataManager/Remote/MockSearchInteractorOutput.swift; sourceTree = SOURCE_ROOT; };
+		B17E2EA826D86E4900FA0454 /* MockSearchRemoteDataManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockSearchRemoteDataManagerInput.swift; path = tMdbAppTests/Modules/Search/Test/DataManager/Remote/MockSearchRemoteDataManagerInput.swift; sourceTree = SOURCE_ROOT; };
+		B17E2EAE26D86F2B00FA0454 /* MockSearchRemoteDataManagerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockSearchRemoteDataManagerOutput.swift; path = tMdbAppTests/Modules/Search/Test/DataManager/Remote/MockSearchRemoteDataManagerOutput.swift; sourceTree = SOURCE_ROOT; };
+		B17E2EB326D86FB200FA0454 /* SearchMovie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchMovie.json; sourceTree = "<group>"; };
+		B17E2EBA26D8720200FA0454 /* FileManager+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+extension.swift"; sourceTree = "<group>"; };
+		B17E2EC226D876C200FA0454 /* SearchSerie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchSerie.json; sourceTree = "<group>"; };
 		B189468E26D6D86100DC32D0 /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
 		B189469926D6FDB100DC32D0 /* MainInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfoCell.swift; sourceTree = "<group>"; };
 		B189469A26D6FDB100DC32D0 /* MainInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainInfoCell.xib; sourceTree = "<group>"; };
@@ -278,7 +292,8 @@
 		B165BAEF26D0AD6C00AB2601 /* tMdbAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				B165BAF026D0AD6C00AB2601 /* tMdbAppTests.swift */,
+				B17E2EB926D871F300FA0454 /* Extensions */,
+				B17E2E8426D86ACA00FA0454 /* Modules */,
 				B165BAF226D0AD6C00AB2601 /* Info.plist */,
 			);
 			path = tMdbAppTests;
@@ -457,6 +472,116 @@
 				B165BBE926D1DC6900AB2601 /* ImageView+extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B17E2E8426D86ACA00FA0454 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2E8526D86AD000FA0454 /* Search */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B17E2E8526D86AD000FA0454 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2EB226D86F7800FA0454 /* Stubs */,
+				B17E2E9326D86BCF00FA0454 /* Mocks */,
+				B17E2E8726D86ADB00FA0454 /* Test */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		B17E2E8726D86ADB00FA0454 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2E8826D86AED00FA0454 /* Interactor */,
+				B17E2E8926D86AF400FA0454 /* DataManager */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		B17E2E8826D86AED00FA0454 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B17E2E8926D86AF400FA0454 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2E8A26D86B1100FA0454 /* Remote */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B17E2E8A26D86B1100FA0454 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2E9426D86BEA00FA0454 /* SearchRemoteDataManagerTest.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B17E2E9326D86BCF00FA0454 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2E9C26D86C5000FA0454 /* Utils */,
+				B17E2E9B26D86C4900FA0454 /* DataManager */,
+				B17E2E9A26D86C4200FA0454 /* Interactor */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B17E2E9A26D86C4200FA0454 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2EA326D86DE900FA0454 /* MockSearchInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B17E2E9B26D86C4900FA0454 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2EA726D86E3300FA0454 /* Remote */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B17E2E9C26D86C5000FA0454 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2E9D26D86CBD00FA0454 /* MockSessionProvider.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B17E2EA726D86E3300FA0454 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2EA826D86E4900FA0454 /* MockSearchRemoteDataManagerInput.swift */,
+				B17E2EAE26D86F2B00FA0454 /* MockSearchRemoteDataManagerOutput.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B17E2EB226D86F7800FA0454 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2EB326D86FB200FA0454 /* SearchMovie.json */,
+				B17E2EC226D876C200FA0454 /* SearchSerie.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		B17E2EB926D871F300FA0454 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2EBA26D8720200FA0454 /* FileManager+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B189469826D6FD8300DC32D0 /* MainInfoCell */ = {
@@ -895,6 +1020,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B17E2EC326D876C200FA0454 /* SearchSerie.json in Resources */,
+				B17E2EB426D86FB200FA0454 /* SearchMovie.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -978,7 +1105,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B165BAF126D0AD6C00AB2601 /* tMdbAppTests.swift in Sources */,
+				B17E2E9E26D86CBD00FA0454 /* MockSessionProvider.swift in Sources */,
+				B17E2EBB26D8720200FA0454 /* FileManager+extension.swift in Sources */,
+				B17E2EA426D86DE900FA0454 /* MockSearchInteractorOutput.swift in Sources */,
+				B17E2EA926D86E4900FA0454 /* MockSearchRemoteDataManagerInput.swift in Sources */,
+				B17E2EAF26D86F2B00FA0454 /* MockSearchRemoteDataManagerOutput.swift in Sources */,
+				B17E2E9526D86BEA00FA0454 /* SearchRemoteDataManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

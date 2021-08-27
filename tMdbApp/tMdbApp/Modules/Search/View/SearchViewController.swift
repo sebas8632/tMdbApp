@@ -73,10 +73,13 @@ class SearchViewController: UIViewController, SearchViewInputProtocol {
 extension SearchViewController: SearchPresenterOutputProtocol {
     
     func updateTable() {
-        self.tableView?.tableFooterView = nil
-        self.tableView?.reloadData()
-        activityIndicator?.stopAnimating()
-        UIApplication.shared.endIgnoringInteractionEvents()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            [weak self] in
+                self?.tableView?.tableFooterView = nil
+                self?.tableView?.reloadData()
+                self?.activityIndicator?.stopAnimating()
+                UIApplication.shared.endIgnoringInteractionEvents()
+        }
 
     }
 }
