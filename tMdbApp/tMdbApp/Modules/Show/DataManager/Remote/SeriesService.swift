@@ -11,7 +11,6 @@ import JSFSNetwork
 enum SeriesService: ServiceProtocol  {
     case getPopular
     case getTopRated
-    case getUpcoming
 
     var baseURL: URL {
         return URL(string: NetworkConstants.baseURL)!
@@ -23,8 +22,6 @@ enum SeriesService: ServiceProtocol  {
             return "/tv/popular"
         case .getTopRated:
             return "/tv/top_rated"
-        case .getUpcoming:
-            return "/tv/latest"
         }
     }
     

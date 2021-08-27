@@ -27,7 +27,7 @@ protocol ShowPresenterInputProtocol: class {
 
     func getMovies()
     func getSeries()
-    func goToDetail(id: Int, type: ShowType)
+    func goToDetail(id: Int, type: ShowType, view: UIViewController)
 }
 
 protocol ShowPresenterOutputProtocol: class {
@@ -58,7 +58,7 @@ protocol ShowInteractorOutputProtocol: class {
 }
 
 protocol ShowRemoteDataManagerInputProtocol: class {
-    var sessionProvider: URLSessionProvider? { get set }
+    var sessionProvider: ProviderProtocol? { get set }
     var interactor: ShowRemoteDataManagerOutputProtocol? { get set }
 
     func searchPopularMovies(group: DispatchGroup)

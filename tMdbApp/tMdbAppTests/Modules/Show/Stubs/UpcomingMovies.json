@@ -1,0 +1,409 @@
+
+{
+  "dates": {
+    "maximum": "2021-09-21",
+    "minimum": "2021-09-02"
+  },
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/swcF9sPlruc6s4gAHuWfbYicbqG.jpg",
+      "genre_ids": [
+        16,
+        10751,
+        12,
+        35
+      ],
+      "id": 675445,
+      "original_language": "en",
+      "original_title": "PAW Patrol: The Movie",
+      "overview": "Ryder and the pups are called to Adventure City to stop Mayor Humdinger from turning the bustling metropolis into a state of chaos.",
+      "popularity": 3574.462,
+      "poster_path": "/ic0intvXZSfBlYPIvWXpU1ivUCO.jpg",
+      "release_date": "2021-08-09",
+      "title": "PAW Patrol: The Movie",
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 164
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xXHZeb1yhJvnSHPzZDqee0zfMb6.jpg",
+      "genre_ids": [
+        28,
+        80,
+        53
+      ],
+      "id": 385128,
+      "original_language": "en",
+      "original_title": "F9",
+      "overview": "Dominic Toretto and his crew battle the most skilled assassin and high-performance driver they've ever encountered: his forsaken brother.",
+      "popularity": 1610.64,
+      "poster_path": "/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg",
+      "release_date": "2021-05-19",
+      "title": "F9",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 3098
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/j28p5VwI5ieZnNwfeuZ5Ve3mPsn.jpg",
+      "genre_ids": [
+        35,
+        28,
+        12,
+        878
+      ],
+      "id": 550988,
+      "original_language": "en",
+      "original_title": "Free Guy",
+      "overview": "A bank teller called Guy realizes he is a background character in an open world video game called Free City that will soon go offline.",
+      "popularity": 1700.206,
+      "poster_path": "/acCS12FVUQ7blkC8qEbuXbsWEs2.jpg",
+      "release_date": "2021-08-11",
+      "title": "Free Guy",
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 392
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wjQXZTlFM3PVEUmKf1sUajjygqT.jpg",
+      "genre_ids": [
+        878,
+        28,
+        53
+      ],
+      "id": 581726,
+      "original_language": "en",
+      "original_title": "Infinite",
+      "overview": "Evan McCauley has skills he never learned and memories of places he has never visited. Self-medicated and on the brink of a mental breakdown, a secret group that call themselves “Infinites” come to his rescue, revealing that his memories are real.",
+      "popularity": 1493.933,
+      "poster_path": "/niw2AKHz6XmwiRMLWaoyAOAti0G.jpg",
+      "release_date": "2021-06-10",
+      "title": "Infinite",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 826
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gX5UrH1TLVVBwI7WxplW43BD6Z1.jpg",
+      "genre_ids": [
+        16,
+        35,
+        12,
+        10751
+      ],
+      "id": 459151,
+      "original_language": "en",
+      "original_title": "The Boss Baby: Family Business",
+      "overview": "The Templeton brothers — Tim and his Boss Baby little bro Ted — have become adults and drifted away from each other. But a new boss baby with a cutting-edge approach and a can-do attitude is about to bring them together again … and inspire a new family business.",
+      "popularity": 1355.6,
+      "poster_path": "/kv2Qk9MKFFQo4WQPaYta599HkJP.jpg",
+      "release_date": "2021-07-01",
+      "title": "The Boss Baby: Family Business",
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 1240
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/pUc51UUQb1lMLVVkDCaZVsCo37U.jpg",
+      "genre_ids": [
+        53,
+        27
+      ],
+      "id": 482373,
+      "original_language": "en",
+      "original_title": "Don't Breathe 2",
+      "overview": "The Blind Man has been hiding out for several years in an isolated cabin and has taken in and raised a young girl orphaned from a devastating house fire. Their quiet life together is shattered when a group of criminals kidnap the girl, forcing the Blind Man to leave his safe haven to save her.",
+      "popularity": 982.894,
+      "poster_path": "/aOu6PJVO9RyGAzdUwG6fupu0gpz.jpg",
+      "release_date": "2021-08-12",
+      "title": "Don't Breathe 2",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 67
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9DZlZvgh9dIGcri79hv3KtHiq5K.jpg",
+      "genre_ids": [
+        28,
+        80,
+        53
+      ],
+      "id": 637649,
+      "original_language": "en",
+      "original_title": "Wrath of Man",
+      "overview": "A cold and mysterious new security guard for a Los Angeles cash truck company surprises his co-workers when he unleashes precision skills during a heist. The crew is left wondering who he is and where he came from. Soon, the marksman's ultimate motive becomes clear as he takes dramatic and irrevocable steps to settle a score.",
+      "popularity": 749.305,
+      "poster_path": "/M7SUK85sKjaStg4TKhlAVyGlz3.jpg",
+      "release_date": "2021-04-22",
+      "title": "Wrath of Man",
+      "video": false,
+      "vote_average": 7.9,
+      "vote_count": 1989
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2nU5H8XIgtMkJrxsryP6nJuAHQ.jpg",
+      "genre_ids": [
+        16,
+        18,
+        12,
+        10751
+      ],
+      "id": 805051,
+      "original_language": "en",
+      "original_title": "Smelliville",
+      "overview": "The Oggly family arrive at the municipal rubbish dump of Smelliville and must look for a new home, but they never feel really welcome anywhere. They stink and are for most humans just a tad too oggly. When Firebottom, the family dragon, crash-lands on the run-down rubbish tip of the small town of Smelliville, the Ogglies at once feel at home. And it's here they want to stay.",
+      "popularity": 542.636,
+      "poster_path": "/qrSP7VCB17yv2ad9Ld17c07SQJk.jpg",
+      "release_date": "2021-01-01",
+      "title": "The Ogglies: Welcome to Smelliville",
+      "video": false,
+      "vote_average": 3.8,
+      "vote_count": 3
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/AhFRV5YxJamUZ4oZdxv6PI0ythi.jpg",
+      "genre_ids": [
+        878,
+        28
+      ],
+      "id": 580489,
+      "original_language": "en",
+      "original_title": "Venom: Let There Be Carnage",
+      "overview": "Sequel to the box-office hit film \"Venom.\"",
+      "popularity": 506.756,
+      "poster_path": "/dZa00JxrwBL2oePDqcwwlJfM8qJ.jpg",
+      "release_date": "2021-09-15",
+      "title": "Venom: Let There Be Carnage",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nDLylQOoIazGyYuWhk21Yww5FCb.jpg",
+      "genre_ids": [
+        28,
+        12,
+        14
+      ],
+      "id": 566525,
+      "original_language": "en",
+      "original_title": "Shang-Chi and the Legend of the Ten Rings",
+      "overview": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
+      "popularity": 312.949,
+      "poster_path": "/j5ZeKzMxZus53z3aEtWcPdSltU7.jpg",
+      "release_date": "2021-09-01",
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "video": false,
+      "vote_average": 7,
+      "vote_count": 1
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nksMy0Uc7Bdg9dAuAV2F2hWKglU.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 744275,
+      "original_language": "en",
+      "original_title": "After We Fell",
+      "overview": "Just as Tessa's life begins to become unglued, nothing is what she thought it would be. Not her friends nor her family. The only person that she should be able to rely on is Hardin, who is furious when he discovers the massive secret that she's been keeping. Before Tessa makes the biggest decision of her life, everything changes because of revelations about her family.",
+      "popularity": 286.385,
+      "poster_path": "/oOZITZodAja6optBgLh8ZZrgzbb.jpg",
+      "release_date": "2021-09-01",
+      "title": "After We Fell",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/g15PR8eQV9DehSWlagvdnJZqoRq.jpg",
+      "genre_ids": [
+        27,
+        53,
+        9648
+      ],
+      "id": 602734,
+      "original_language": "en",
+      "original_title": "Spiral: From the Book of Saw",
+      "overview": "Working in the shadow of an esteemed police veteran, brash Detective Ezekiel “Zeke” Banks and his rookie partner take charge of a grisly investigation into murders that are eerily reminiscent of the city’s gruesome past.  Unwittingly entrapped in a deepening mystery, Zeke finds himself at the center of the killer’s morbid game.",
+      "popularity": 263.783,
+      "poster_path": "/lcyKve7nXRFgRyms9M1bndNkKOx.jpg",
+      "release_date": "2021-05-12",
+      "title": "Spiral: From the Book of Saw",
+      "video": false,
+      "vote_average": 6.3,
+      "vote_count": 733
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3pIqd1hgZ2xqzWEyiYp4blqE9Fi.jpg",
+      "genre_ids": [
+        53,
+        18,
+        36
+      ],
+      "id": 522241,
+      "original_language": "en",
+      "original_title": "The Courier",
+      "overview": "Cold War spy Greville Wynne and his Russian source try to put an end to the Cuban Missile Crisis.",
+      "popularity": 306.436,
+      "poster_path": "/zFIjKtZrzhmc7HecdFXXjsLR2Ig.jpg",
+      "release_date": "2021-03-18",
+      "title": "The Courier",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 298
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/g1cMEQnEptUJ7Sv8SRjWBTTHyMv.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 565028,
+      "original_language": "en",
+      "original_title": "Candyman",
+      "overview": "Anthony and his partner move into a loft in the now gentrified Cabrini. After a chance encounter with an old-timer exposes Anthony to the true story behind Candyman, he unknowingly opens a door to a complex past that unravels his own sanity and unleashes a terrifying wave of violence.",
+      "popularity": 208.386,
+      "poster_path": "/ygyoaQ8bCp4kDcLc6SdP5GvqmDW.jpg",
+      "release_date": "2021-08-25",
+      "title": "Candyman",
+      "video": false,
+      "vote_average": 6.8,
+      "vote_count": 9
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ckCrunvxJ1SqL1w4goJGGGZ5PGP.jpg",
+      "genre_ids": [
+        18,
+        80,
+        53
+      ],
+      "id": 616651,
+      "original_language": "en",
+      "original_title": "Stillwater",
+      "overview": "Bill Baker, an American oil-rig roughneck from Oklahoma, travels to Marseille to visit his estranged daughter, Allison, who is in prison for a murder she claims she did not commit. Confronted with language barriers, cultural differences, and a complicated legal system, Bill builds a new life for himself in France as he makes it his personal mission to exonerate his daughter.",
+      "popularity": 280.372,
+      "poster_path": "/cPdmPwcIcmu0ugfKcdFtI3vmOJq.jpg",
+      "release_date": "2021-07-29",
+      "title": "Stillwater",
+      "video": false,
+      "vote_average": 6.9,
+      "vote_count": 97
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/eP07auW0baxhbflms6obNfRB0NG.jpg",
+      "genre_ids": [
+        12,
+        18,
+        14
+      ],
+      "id": 559907,
+      "original_language": "en",
+      "original_title": "The Green Knight",
+      "overview": "An epic fantasy adventure based on the timeless Arthurian legend, The Green Knight tells the story of Sir Gawain, King Arthur's reckless and headstrong nephew, who embarks on a daring quest to confront the eponymous Green Knight, a gigantic emerald-skinned stranger and tester of men.",
+      "popularity": 154.016,
+      "poster_path": "/if4hw3Ou5Sav9Em7WWHj66mnywp.jpg",
+      "release_date": "2021-07-29",
+      "title": "The Green Knight",
+      "video": false,
+      "vote_average": 7,
+      "vote_count": 186
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6XVqVAMOsKL5C26pHesiAawuGYW.jpg",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "id": 630586,
+      "original_language": "en",
+      "original_title": "Wrong Turn",
+      "overview": "Jen and a group of friends set out to hike the Appalachian Trail. Despite warnings to stick to the trail, the hikers stray off course—and cross into land inhabited by The Foundation, a hidden community of mountain dwellers who use deadly means to protect their way of life.",
+      "popularity": 189.903,
+      "poster_path": "/4U1SBHmwHkNA0eHZ2n1CuiC1K1g.jpg",
+      "release_date": "2021-01-26",
+      "title": "Wrong Turn",
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 519
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/judXeFCXqOluMkGmnV9IG4t1SwI.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 776552,
+      "original_language": "en",
+      "original_title": "Misha and the Wolves",
+      "overview": "A woman’s Holocaust memoir takes the world by storm, but a fallout with her publisher-turned-detective reveals her story as an audacious deception created to hide a darker truth.",
+      "popularity": 84.629,
+      "poster_path": "/1wjefBDTCMnrij8fB472op30CjO.jpg",
+      "release_date": "2021-09-03",
+      "title": "Misha and the Wolves",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aknvFyJUQQoZFtmFnYzKi4vGv4J.jpg",
+      "genre_ids": [
+        12,
+        18,
+        878
+      ],
+      "id": 438631,
+      "original_language": "en",
+      "original_title": "Dune",
+      "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
+      "popularity": 101.417,
+      "poster_path": "/cDbNAY0KM84cxXhmj8f0dLWza3t.jpg",
+      "release_date": "2021-09-15",
+      "title": "Dune",
+      "video": false,
+      "vote_average": 0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uEJuqp08dH6IQwZJGASlPZOXqKu.jpg",
+      "genre_ids": [
+        18,
+        10402,
+        10749
+      ],
+      "id": 467909,
+      "original_language": "en",
+      "original_title": "In the Heights",
+      "overview": "The story of Usnavi, a bodega owner who has mixed feelings about closing his store and retiring to the Dominican Republic or staying in Washington Heights.",
+      "popularity": 66.081,
+      "poster_path": "/RO4KoJyoQMQzh9z76d4v4FJMmJ.jpg",
+      "release_date": "2021-06-10",
+      "title": "In the Heights",
+      "video": false,
+      "vote_average": 7.5,
+      "vote_count": 291
+    }
+  ],
+  "total_pages": 16,
+  "total_results": 318
+}

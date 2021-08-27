@@ -10,7 +10,7 @@ import JSFSNetwork
 
 class ShowRemoteDataManager: ShowRemoteDataManagerInputProtocol {
     
-    var sessionProvider: URLSessionProvider?
+    var sessionProvider: ProviderProtocol?
     var interactor: ShowRemoteDataManagerOutputProtocol?
    
     func searchPopularMovies(group: DispatchGroup) {

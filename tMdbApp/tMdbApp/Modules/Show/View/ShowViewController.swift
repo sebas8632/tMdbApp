@@ -100,6 +100,6 @@ extension ShowViewController: MenuBarDelegate {
 extension ShowViewController: CollectionDelegate {
     func showDetail(by id: Int) {
         guard let type = ShowType(rawValue: indexType) else { return }
-        presenter?.goToDetail(id: id, type: type)
+        presenter?.goToDetail(id: id, type: type, view: self)
     }
 }

@@ -50,6 +50,21 @@
 		B17E2EE026D897BF00FA0454 /* MockSearchPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2EDF26D897BF00FA0454 /* MockSearchPresenterOutput.swift */; };
 		B17E2EE926D89F1200FA0454 /* SearchViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2EE826D89F1200FA0454 /* SearchViewControllerTest.swift */; };
 		B17E2EEF26D89F5300FA0454 /* MockSearchPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2EEE26D89F5300FA0454 /* MockSearchPresenterInput.swift */; };
+		B17E2EF926D8AF5400FA0454 /* ShowRemoteDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2EF826D8AF5400FA0454 /* ShowRemoteDataManagerTest.swift */; };
+		B17E2F0226D8B03A00FA0454 /* MockShowSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2F0126D8B03A00FA0454 /* MockShowSessionProvider.swift */; };
+		B17E2F0826D8B2A700FA0454 /* PopularMovies.json in Resources */ = {isa = PBXBuildFile; fileRef = B17E2F0726D8B2A700FA0454 /* PopularMovies.json */; };
+		B17E2F0C26D8B2C700FA0454 /* TopRatedMovies.json in Resources */ = {isa = PBXBuildFile; fileRef = B17E2F0B26D8B2C700FA0454 /* TopRatedMovies.json */; };
+		B17E2F1026D8B2FF00FA0454 /* UpcomingMovies.json in Resources */ = {isa = PBXBuildFile; fileRef = B17E2F0F26D8B2FF00FA0454 /* UpcomingMovies.json */; };
+		B17E2F1626D8B48500FA0454 /* MockShowRemoteDataManagerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2F1526D8B48500FA0454 /* MockShowRemoteDataManagerOutput.swift */; };
+		B17E2F1F26D8B9C500FA0454 /* ShowInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2F1E26D8B9C500FA0454 /* ShowInteractorTest.swift */; };
+		B17E2F2526D8BA9F00FA0454 /* MockShowRemoteDataManagerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2F2426D8BA9F00FA0454 /* MockShowRemoteDataManagerInput.swift */; };
+		B17E2F2A26D8BC8100FA0454 /* MockShowInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2F2926D8BC8100FA0454 /* MockShowInteractorOutput.swift */; };
+		B17E2F3526D8C81500FA0454 /* ShowPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2F3426D8C81500FA0454 /* ShowPresenterTest.swift */; };
+		B17E2F3B26D8C8B200FA0454 /* MockShowInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2F3A26D8C8B200FA0454 /* MockShowInteractorInput.swift */; };
+		B17E2F4026D8C95D00FA0454 /* MockShowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2F3F26D8C95D00FA0454 /* MockShowRouter.swift */; };
+		B17E2F4726D8C9FE00FA0454 /* MockShowPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2F4626D8C9FE00FA0454 /* MockShowPresenterOutput.swift */; };
+		B17E2F4E26D8CD2800FA0454 /* ShowViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2F4D26D8CD2800FA0454 /* ShowViewControllerTest.swift */; };
+		B17E2F5426D8CDA100FA0454 /* MockShowPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E2F5326D8CDA100FA0454 /* MockShowPresenterInput.swift */; };
 		B189468F26D6D86100DC32D0 /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189468E26D6D86100DC32D0 /* MovieDetailModel.swift */; };
 		B189469B26D6FDB100DC32D0 /* MainInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B189469926D6FDB100DC32D0 /* MainInfoCell.swift */; };
 		B189469C26D6FDB100DC32D0 /* MainInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B189469A26D6FDB100DC32D0 /* MainInfoCell.xib */; };
@@ -186,6 +201,21 @@
 		B17E2EDF26D897BF00FA0454 /* MockSearchPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchPresenterOutput.swift; sourceTree = "<group>"; };
 		B17E2EE826D89F1200FA0454 /* SearchViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTest.swift; sourceTree = "<group>"; };
 		B17E2EEE26D89F5300FA0454 /* MockSearchPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchPresenterInput.swift; sourceTree = "<group>"; };
+		B17E2EF826D8AF5400FA0454 /* ShowRemoteDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRemoteDataManagerTest.swift; sourceTree = "<group>"; };
+		B17E2F0126D8B03A00FA0454 /* MockShowSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShowSessionProvider.swift; sourceTree = "<group>"; };
+		B17E2F0726D8B2A700FA0454 /* PopularMovies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PopularMovies.json; sourceTree = "<group>"; };
+		B17E2F0B26D8B2C700FA0454 /* TopRatedMovies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TopRatedMovies.json; sourceTree = "<group>"; };
+		B17E2F0F26D8B2FF00FA0454 /* UpcomingMovies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UpcomingMovies.json; sourceTree = "<group>"; };
+		B17E2F1526D8B48500FA0454 /* MockShowRemoteDataManagerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShowRemoteDataManagerOutput.swift; sourceTree = "<group>"; };
+		B17E2F1E26D8B9C500FA0454 /* ShowInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInteractorTest.swift; sourceTree = "<group>"; };
+		B17E2F2426D8BA9F00FA0454 /* MockShowRemoteDataManagerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShowRemoteDataManagerInput.swift; sourceTree = "<group>"; };
+		B17E2F2926D8BC8100FA0454 /* MockShowInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShowInteractorOutput.swift; sourceTree = "<group>"; };
+		B17E2F3426D8C81500FA0454 /* ShowPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPresenterTest.swift; sourceTree = "<group>"; };
+		B17E2F3A26D8C8B200FA0454 /* MockShowInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShowInteractorInput.swift; sourceTree = "<group>"; };
+		B17E2F3F26D8C95D00FA0454 /* MockShowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShowRouter.swift; sourceTree = "<group>"; };
+		B17E2F4626D8C9FE00FA0454 /* MockShowPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShowPresenterOutput.swift; sourceTree = "<group>"; };
+		B17E2F4D26D8CD2800FA0454 /* ShowViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewControllerTest.swift; sourceTree = "<group>"; };
+		B17E2F5326D8CDA100FA0454 /* MockShowPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShowPresenterInput.swift; sourceTree = "<group>"; };
 		B189468E26D6D86100DC32D0 /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
 		B189469926D6FDB100DC32D0 /* MainInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfoCell.swift; sourceTree = "<group>"; };
 		B189469A26D6FDB100DC32D0 /* MainInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainInfoCell.xib; sourceTree = "<group>"; };
@@ -491,6 +521,7 @@
 		B17E2E8426D86ACA00FA0454 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B17E2EF226D8AF0C00FA0454 /* Show */,
 				B17E2E8526D86AD000FA0454 /* Search */,
 			);
 			path = Modules;
@@ -633,6 +664,140 @@
 			isa = PBXGroup;
 			children = (
 				B17E2EE826D89F1200FA0454 /* SearchViewControllerTest.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B17E2EF226D8AF0C00FA0454 /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2EF526D8AF2200FA0454 /* Test */,
+				B17E2EF426D8AF1D00FA0454 /* Mocks */,
+				B17E2EF326D8AF1800FA0454 /* Stubs */,
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
+		B17E2EF326D8AF1800FA0454 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F0726D8B2A700FA0454 /* PopularMovies.json */,
+				B17E2F0B26D8B2C700FA0454 /* TopRatedMovies.json */,
+				B17E2F0F26D8B2FF00FA0454 /* UpcomingMovies.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		B17E2EF426D8AF1D00FA0454 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F4526D8C9EC00FA0454 /* Presenter */,
+				B17E2F3E26D8C94E00FA0454 /* Router */,
+				B17E2F2826D8BC3F00FA0454 /* Interactor */,
+				B17E2F1326D8B46D00FA0454 /* DataManager */,
+				B17E2F0026D8B02700FA0454 /* Utils */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B17E2EF526D8AF2200FA0454 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F4C26D8CD1600FA0454 /* View */,
+				B17E2F3326D8C7FC00FA0454 /* Presenter */,
+				B17E2F1D26D8B9B200FA0454 /* Interactor */,
+				B17E2EF626D8AF2C00FA0454 /* DataManager */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		B17E2EF626D8AF2C00FA0454 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2EF726D8AF3200FA0454 /* Remote */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B17E2EF726D8AF3200FA0454 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2EF826D8AF5400FA0454 /* ShowRemoteDataManagerTest.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B17E2F0026D8B02700FA0454 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F0126D8B03A00FA0454 /* MockShowSessionProvider.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B17E2F1326D8B46D00FA0454 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F1426D8B47300FA0454 /* Remote */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B17E2F1426D8B47300FA0454 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F1526D8B48500FA0454 /* MockShowRemoteDataManagerOutput.swift */,
+				B17E2F2426D8BA9F00FA0454 /* MockShowRemoteDataManagerInput.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B17E2F1D26D8B9B200FA0454 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F1E26D8B9C500FA0454 /* ShowInteractorTest.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B17E2F2826D8BC3F00FA0454 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F2926D8BC8100FA0454 /* MockShowInteractorOutput.swift */,
+				B17E2F3A26D8C8B200FA0454 /* MockShowInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B17E2F3326D8C7FC00FA0454 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F3426D8C81500FA0454 /* ShowPresenterTest.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B17E2F3E26D8C94E00FA0454 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F3F26D8C95D00FA0454 /* MockShowRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B17E2F4526D8C9EC00FA0454 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F4626D8C9FE00FA0454 /* MockShowPresenterOutput.swift */,
+				B17E2F5326D8CDA100FA0454 /* MockShowPresenterInput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B17E2F4C26D8CD1600FA0454 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B17E2F4D26D8CD2800FA0454 /* ShowViewControllerTest.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1074,7 +1239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B17E2EC326D876C200FA0454 /* SearchSerie.json in Resources */,
+				B17E2F0C26D8B2C700FA0454 /* TopRatedMovies.json in Resources */,
+				B17E2F0826D8B2A700FA0454 /* PopularMovies.json in Resources */,
 				B17E2EB426D86FB200FA0454 /* SearchMovie.json in Resources */,
+				B17E2F1026D8B2FF00FA0454 /* UpcomingMovies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1165,12 +1333,24 @@
 				B17E2EBB26D8720200FA0454 /* FileManager+extension.swift in Sources */,
 				B17E2ED426D894E400FA0454 /* MockSearchInteractorInput.swift in Sources */,
 				B17E2EA426D86DE900FA0454 /* MockSearchInteractorOutput.swift in Sources */,
+				B17E2F3B26D8C8B200FA0454 /* MockShowInteractorInput.swift in Sources */,
+				B17E2EF926D8AF5400FA0454 /* ShowRemoteDataManagerTest.swift in Sources */,
+				B17E2F1626D8B48500FA0454 /* MockShowRemoteDataManagerOutput.swift in Sources */,
+				B17E2F0226D8B03A00FA0454 /* MockShowSessionProvider.swift in Sources */,
 				B17E2EA926D86E4900FA0454 /* MockSearchRemoteDataManagerInput.swift in Sources */,
 				B17E2EC726D8807D00FA0454 /* SearchInteractorInputTest.swift in Sources */,
+				B17E2F2A26D8BC8100FA0454 /* MockShowInteractorOutput.swift in Sources */,
 				B17E2EAF26D86F2B00FA0454 /* MockSearchRemoteDataManagerOutput.swift in Sources */,
+				B17E2F4E26D8CD2800FA0454 /* ShowViewControllerTest.swift in Sources */,
+				B17E2F4726D8C9FE00FA0454 /* MockShowPresenterOutput.swift in Sources */,
 				B17E2E9526D86BEA00FA0454 /* SearchRemoteDataManagerTest.swift in Sources */,
+				B17E2F3526D8C81500FA0454 /* ShowPresenterTest.swift in Sources */,
+				B17E2F5426D8CDA100FA0454 /* MockShowPresenterInput.swift in Sources */,
+				B17E2F1F26D8B9C500FA0454 /* ShowInteractorTest.swift in Sources */,
 				B17E2ECE26D8940600FA0454 /* SearchPresenterInputTest.swift in Sources */,
+				B17E2F4026D8C95D00FA0454 /* MockShowRouter.swift in Sources */,
 				B17E2EE026D897BF00FA0454 /* MockSearchPresenterOutput.swift in Sources */,
+				B17E2F2526D8BA9F00FA0454 /* MockShowRemoteDataManagerInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

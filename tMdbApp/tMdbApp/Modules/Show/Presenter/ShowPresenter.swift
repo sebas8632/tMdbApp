@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 class ShowPresenter: ShowPresenterInputProtocol {
     
     var view: ShowPresenterOutputProtocol?
@@ -29,8 +29,8 @@ class ShowPresenter: ShowPresenterInputProtocol {
     }
     
     
-    func goToDetail(id: Int, type: ShowType) {
-        router?.presentDetail(id: id, type: type, view: view as! ShowViewController)
+    func goToDetail(id: Int, type: ShowType, view: UIViewController) {
+        router?.presentDetail(id: id, type: type, view: view)
     }
 }
 
