@@ -47,3 +47,17 @@ This project require  `Xcode 12.0`, `Swift 5` and should be run on `iOS 14.0`.
 
 1. Install [Carthage](https://github.com/Carthage/Carthage).
 
+2. Then, execute the next command. `carthage update --use-xcframeworks`.
+
+3. Then, you should `run` the app.
+
+## Evidence
+On this Section we are going to watch the app running.
+
+| Movies Section | Series Section |
+| ------- | ------- |
+|![alt text](https://github.com/sebas8632/tMdbApp/blob/master/tMdbApp/Evidence/moviesSection.gif) | ![alt text](https://github.com/sebas8632/tMdbApp/blob/master/tMdbApp/Evidence/seriesSection.gif) |
+
+| Search Section With Pagination |
+| ------- |
+|![alt text](https://github.com/sebas8632/tMdbApp/blob/master/tMdbApp/Evidence/searchSectionWithPagination.gif) |
