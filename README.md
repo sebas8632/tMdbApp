@@ -24,6 +24,34 @@ This architecture is conformed by 5 layers which have single responsibilities, w
 ### Entity 
 > Entity layer provides a model which interactor use to create objects from the fetched data. The Entity is probably the simplest element inside a VIPER structure.
 
+## Project Structure
+
+### App Folder
+> Is a folder which have the appDelegate, Assets, and, Network Constants).
+
+![alt text](https://github.com/sebas8632/tMdbApp/blob/master/tMdbApp/Evidence/AppFolder.png)
+
+### Modules
+> In this folder we have each app module. In this case we have a Search, Show, and Detail Module, where we can find a viper architecture for each module. This architecture allow us to define single responsabilities for each layer.
+
+![alt text](https://github.com/sebas8632/tMdbApp/blob/master/tMdbApp/Evidence/Modules.png)
+
+### Utils
+> In this folder we can find a multiples subfolders which specific responsabilities. The main idea of this folder is have a transversal module which help us with reusables components, transversal entities, and some extensions. As the app modules are pretty similar we choose this approach to have reusables components through the app development to avoid the time invest or re do some things.
+
+![alt text](https://github.com/sebas8632/tMdbApp/blob/master/tMdbApp/Evidence/UtilsFolder.png)
+
+### Components
+> As We've said before, on this components we can find reusables components like menuBar, ShowComponentsView(Carousel View), and a Search Component.
+
+![alt text](https://github.com/sebas8632/tMdbApp/blob/master/tMdbApp/Evidence/ComponentsFolder.png)
+
+### Unit Test
+> In this section we have the unit test structure, this folder meets the Viper architecture requirements. To continue, we can find a Test Double approach where we use Dummies, Spies, Mocks, and Stubs doubles to test the differents architecture layers.
+
+![alt text](https://github.com/sebas8632/tMdbApp/blob/master/tMdbApp/Evidence/TestFolder.png)
+
+
 ## Good Practices
 With the following practices, we've achieved create a product with highly quality.
 - **Clean code**
@@ -61,3 +89,17 @@ On this Section we are going to watch the app running.
 | Search Section With Pagination |
 | ------- |
 |![alt text](https://github.com/sebas8632/tMdbApp/blob/master/tMdbApp/Evidence/searchSectionWithPagination.gif) |
+
+
+## Unit test Log
+
+![alt text](https://github.com/sebas8632/tMdbApp/blob/master/tMdbApp/Evidence/UnitTest.png)
+
+
+## Questions
+
+1. ¿En qué consiste el principio de responsabilidad única? Cuál es su propósito?
+> El principio de responsabilidad única consiste en separar cada componente de la aplicación y asegurarnos de que cumple una única responsabilidad, esto con el propósito de que se evite el acomplamiento y que se tenga encapsulado en una clase o modulo específico dicha responsabilidad.
+
+2. ¿Qué características tiene, según su opinión, un “buen” código o código limpio?
+> Para que un código sea de buena calidad o código limpió, es necesario desde un comienzo implementar los principios SOLID, esto con el objetivo de generar un código con bajo acoplamiento y alta cohesión y que nos permita tener un código altamente testeable y escalable. Además, que cumpla con el principio DRY y así evitar la replicación de código. 
