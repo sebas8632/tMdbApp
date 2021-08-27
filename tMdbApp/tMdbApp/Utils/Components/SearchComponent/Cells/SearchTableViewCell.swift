@@ -21,7 +21,7 @@ class SearchTableViewCell: UITableViewCell {
         didSet {
             titleLabel.text = info?.title
             releaseDateLabel.text = info?.date
-            voteAverageLabel.text = info?.voteAverage != nil ? "\(info?.voteAverage ?? 0)/5.0" : "N/A"
+            voteAverageLabel.text = info?.voteAverage != nil ? "\(info?.voteAverage ?? 0)" : "N/A"
             posterImageView.getImage(posterPath: info?.imagePath)
         }
     }

@@ -22,7 +22,7 @@ class ItemCollectionCell: UICollectionViewCell {
     
     var model: ShowContentProtocol? {
         didSet {
-            let vote = model?.voteAverage != nil ? "\(model?.voteAverage ?? 0)/ 5.0" : "N/A"
+            let vote = model?.voteAverage != nil ? "\(model?.voteAverage ?? 0)" : "N/A"
             titleLabel.text = model?.title
             voteLabel.text = vote
             dateLabel.text = model?.date
